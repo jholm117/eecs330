@@ -13,9 +13,9 @@ body{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: bisque;
 }
 .nav-option{
+    background-color: aqua;
     display: inline-block;
     margin-right: -0.3%;
     height: 3em;
@@ -28,4 +28,27 @@ body{
     font-size: 20px;
     text-decoration: none;
     color: black;
+}
+
+.list-results{
+    width: 50%;
+    margin: auto;
+}
+
+.list-results li{
+    list-style-type: none;
+    padding: 1em 1em 1em 1em;
+    margin-bottom: 0.3em;
+}
+
+.list-results li img{
+    float: left;
+    height: 4em;
+    width: 4em;
+    display:block;
+}
+
+.recipe-info-wrapper{
+    background-color: purple;
+    float: right;
 }
