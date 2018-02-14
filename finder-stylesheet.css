@@ -34,4 +34,13 @@ body{
 
 .badge{
     margin-left: 10px;
+    float: right;
+}
+
+.recipe-items {
+  display: none;
+}
+
+.show {
+  display: block;
 }
