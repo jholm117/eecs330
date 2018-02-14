@@ -1,9 +1,9 @@
-function applySearch() {
+function applySearch(listName) {
 	var searchBox, filter, list, listItems, currentItem, i;
 	searchBox = document.getElementById("search");
 	filter = searchBox.value.toUpperCase();
-	//list = document.getElementById(listName);
-	list = document.getElementById("recipe-ul");
+	list = document.getElementById(listName);
+	//list = document.getElementById("recipe-ul");
 	listItems = list.getElementsByTagName('li');
 
 	for (i = 0; i < listItems.length; i++)
