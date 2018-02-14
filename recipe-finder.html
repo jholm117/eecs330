@@ -9,11 +9,18 @@
     </head>
     <body>
         <input type="search" name="search" id="search" placeholder="Search for Recipes">
-        <div class="toolbar">
-            <select name="filter-choice" id="filter options">
-                <option value="vegetarian">Vegetarian</option>
-            </select>
-        </div>
+        
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recipe Filter
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="badge badge-pill badge-danger">Popular</a></li>
+              <li><a href="#" class="badge badge-pill badge-warning">Asian</a></li>
+              <li><a href="#" class="badge badge-pill badge-info">Mexican</a></li>
+              <li><a href="#" class="badge badge-pill badge-success">Vegetarian</a></li>
+            </ul>
+          </div>
+
         <div class="list-results">
             <ul>
                 <li>
