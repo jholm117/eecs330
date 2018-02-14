@@ -31,3 +31,12 @@ body{
     background-color: purple;
     float: right;
 }
+
+.btn{
+    margin: 5px;
+    padding-right: 10px;
+}
+
+.badge{
+    margin-left: 10px;
+}
