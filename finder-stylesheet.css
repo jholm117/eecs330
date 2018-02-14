@@ -31,3 +31,7 @@ body{
     background-color: purple;
     float: right;
 }
+
+.badge{
+    margin-left: 10px;
+}
