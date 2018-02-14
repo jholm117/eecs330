@@ -14,10 +14,10 @@
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recipe Filter
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <button class="dropdown-item" type="button">Popular<span class="badge badge-secondary">5</span></button>
-                <button class="dropdown-item" type="button">Asian<span class="badge badge-secondary">1</span></button>
-                <button class="dropdown-item" type="button">Mexican<span class="badge badge-secondary">1</span></button>
-                <button class="dropdown-item" type="button">Vegetarian<span class="badge badge-secondary">2</span></button>
+                <button class="dropdown-item" type="button" onclick="filterSelection('all')">All<span class="badge badge-secondary">5</span></button>
+                <button class="dropdown-item" type="button" onclick="filterSelection('Asian')">Asian<span class="badge badge-secondary">1</span></button>
+                <button class="dropdown-item" type="button" onclick="filterSelection('Mexican')">Mexican<span class="badge badge-secondary">1</span></button>
+                <button class="dropdown-item" type="button" onclick="filterSelection('Vegetarian')">Vegetarian<span class="badge badge-secondary">2</span></button>
             </ul>
           </div>
 
@@ -49,12 +49,12 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Ginger Soy Chicken</h2>
-                            <img src="open-iconic/svg/clock.svg" alt="clock">
+                            <img src="node_modules/open-iconic/svg/clock.svg" alt="clock">
                             <span>30 min</span>
                             <span>600 Cal</span>
                             <div>
                                 <img src="node_modules/open-iconic/svg/heart.svg" alt="heart">
-                                <img src="open-iconic/svg/list.svg" alt="list">
+                                <img src="node_modules/open-iconic/svg/list.svg" alt="list">
                             </div>
                             
                         </div>
@@ -68,6 +68,7 @@
             <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
             <a class="nav-item nav-link" href="coming-soon.html">My Profile</a>
         </nav>
+        <script src="recipe-filter.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
