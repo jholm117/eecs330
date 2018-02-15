@@ -36,3 +36,52 @@ body{
     margin-left: 10px;
     float: right;
 }
+
+.icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.recipe-info{
+    float: left;
+    font-size: 1.5rem;
+}
+
+.recipe-buttons{
+    float: right;
+}
+
+.recipe-buttons img{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+}
+
+#heart{
+    margin-bottom: 2rem;
+}
+
+.cook-time{
+    float: left;
+}
+
+.calorie-count{
+    text-align: center;
+}
+
+.recipe-image{
+    display: block;
+    float: left;
+    height: 100%;
+    width: 9rem;
+}
+
+.recipe-card{
+    width: 50%;
+    height: 9rem;
+    margin: auto;    
+}
+
+.stats{
+    margin-top: 1.5rem;
+}

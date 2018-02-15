@@ -9,7 +9,6 @@
     </head>
     <body>
         <input type="search" name="search" id="search" placeholder="Search for Recipes">
-
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recipe Filter
             <span class="caret"></span></button>
@@ -19,8 +18,7 @@
                 <button class="dropdown-item" type="button" onclick="filterSelection('Mexican')">Mexican<span class="badge badge-secondary">1</span></button>
                 <button class="dropdown-item" type="button" onclick="filterSelection('Vegetarian')">Vegetarian<span class="badge badge-secondary">2</span></button>
             </ul>
-          </div>
-
+        </div>
         <div class="list-results">
             <ul>
                 <li class="recipe-items Asian">
@@ -38,26 +36,23 @@
                 <li class="recipe-items Mexican">Tacos</li>
             </ul>
         </div>
-        <div class="container">
-            <div class="row is-flex no-gutters" style="background-color:blue;">
-                <div class="col-md-2">
-                    <div class="card h-100">
-                        <img class="card-img" src="images/chicken.jpg" alt="Card image cap">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">Ginger Soy Chicken</h2>
-                            <img src="node_modules/open-iconic/svg/clock.svg" alt="clock">
-                            <span>30 min</span>
-                            <span>600 Cal</span>
-                            <div>
-                                <img src="node_modules/open-iconic/svg/heart.svg" alt="heart">
-                                <img src="node_modules/open-iconic/svg/list.svg" alt="list">
+        <div class="recipe-card border">
+            <img class="recipe-image" src="images/chicken.jpg" alt="Card image cap">
+            <div class="card border-0">
+                <div class="card-body">
+                    <div class="recipe-info">
+                        <h2 class="card-title">Ginger Soy Chicken</h2>
+                        <div class="stats">
+                            <div class="cook-time">
+                                <img class="icon" src="node_modules/open-iconic/svg/clock.svg" alt="clock">
+                                <span>30 min</span> 
                             </div>
-                            
+                            <div class="calorie-count">600 Cal</div>
                         </div>
+                    </div>
+                    <div class="recipe-buttons">
+                        <img class="icon" id="heart" src="node_modules/open-iconic/svg/heart.svg" alt="heart">
+                        <img class="icon" src="node_modules/open-iconic/svg/list.svg" alt="list">
                     </div>
                 </div>
             </div>
