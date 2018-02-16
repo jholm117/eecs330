@@ -8,7 +8,7 @@
         <title>Recipe Finder</title>
     </head>
     <body>
-        <input type="search" name="search" id="search" placeholder="Search for Recipes">
+        <input type="search" name="search" id="search" placeholder="Search for recipes..." onkeyup="applySearch('recipe-ul')">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recipe Filter
             <span class="caret"></span></button>
@@ -20,17 +20,7 @@
             </ul>
         </div>
         <div class="list-results">
-            <ul>
-                <li class="recipe-items Asian">
-                    <span>
-                        <img src="images/chicken.jpg">
-                    </span>
-                    <div class="recipe-info-wrapper">
-                        <div class="recipe-title">title</div>
-                        <div class="recipe-info">info</div>
-                        <div class="recipe-tags">tags</div>
-                    </div>
-                </li>
+            <ul id="recipe-ul">
                 <li class="recipe-items Vegetarian">Garlic Roasted Broccoli</li>
                 <li class="recipe-items Vegetarian">Orange Juice</li>
                 <li class="recipe-items Mexican">Tacos</li>
@@ -63,6 +53,7 @@
             <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
             <a class="nav-item nav-link" href="coming-soon.html">My Profile</a>
         </nav>
+    	  <script src="search-bar.js"></script>
         <script src="recipe-filter.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
