@@ -19,40 +19,39 @@
                 <button class="dropdown-item" type="button" onclick="filterSelection('Vegetarian')">Vegetarian<span class="badge badge-secondary">2</span></button>
             </ul>
         </div>
-        <div class="list-results">
-            <ul id="recipe-ul">
-                <li class="recipe-items Vegetarian">Garlic Roasted Broccoli</li>
-                <li class="recipe-items Vegetarian">Orange Juice</li>
-                <li class="recipe-items Mexican">Tacos</li>
-            </ul>
-        </div>
-        <div class="recipe-card border">
-            <img class="recipe-image" src="images/chicken.jpg" alt="Card image cap">
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="recipe-info">
-                        <h2 class="card-title">Ginger Soy Chicken</h2>
-                        <div class="stats">
-                            <div class="cook-time">
-                                <img class="icon" src="node_modules/open-iconic/svg/clock.svg" alt="clock">
-                                <span>30 min</span> 
-                            </div>
-                            <div class="calorie-count">600 Cal</div>
-                        </div>
-                    </div>
-                    <div class="recipe-buttons">
-                        <img class="icon" id="heart" src="node_modules/open-iconic/svg/heart.svg" alt="heart">
-                        <img class="icon" src="node_modules/open-iconic/svg/list.svg" alt="list">
-                    </div>
-                </div>
-            </div>
-        </div>
+    	<li id=recipeLiTemplate style="display:none">
+		<div class="recipe-card border">
+		    <img class="recipe-image" alt="Card image cap">
+		    <div class="card border-0">
+			<div class="card-body">
+			    <div class="recipe-info">
+				<h2 class="card-title"></h2>
+				<div class="stats">
+				    <div class="cook-time">
+					<img class="icon" src="node_modules/open-iconic/svg/clock.svg" alt="clock">
+					<span></span>
+				    </div>
+				    <div class="calorie-count"></div>
+				</div>
+			    </div>
+			    <div class="recipe-buttons">
+				<img class="icon" id="heart" src="node_modules/open-iconic/svg/heart.svg" alt="heart">
+				<img class="icon" src="node_modules/open-iconic/svg/list.svg" onclick="addToShoppingList('gingerSoyChicken')" alt="list">
+			    </div>
+			</div>
+		    </div>
+		</div>
+	</li>
+	<ul id="recipe-ul">
+	</ul>
         <nav class="nav nav-pills nav-fill fixed-bottom">            
             <a class="nav-item nav-link active" href="#">Find Recipes</a>
             <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
             <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
             <a class="nav-item nav-link" href="coming-soon.html">My Profile</a>
         </nav>
+	<script src="buildRecipe.js"></script>
+	<script src="recipes.js"></script>
     	  <script src="search-bar.js"></script>
         <script src="recipe-filter.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

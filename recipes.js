@@ -4,7 +4,19 @@ const recipes = {
 		id: "gingerSoyChicken",
 		imgSrc: "images/chicken.jpg",
 		cookTime: "30 min",
-		calories: "600 cal"}
+		calories: "600 cal"},
+	"lasagna" : {
+		name: "Lasagna",
+		id: "lasagna",
+		imgSrc: "images/chicken.jpg",
+		cookTime: "3 hr",
+		calories: "900 cal"}
+}
+
+const recipeList = document.getElementById("recipe-ul")
+for (var recipeId in recipes) {
+	recipeLi=buildRecipe(recipes[recipeId]);
+	recipeList.appendChild(recipeLi)
 }
 
 if (localStorage.getItem("recipes") == null){
