@@ -15,7 +15,7 @@ const recipes = {
 
 const recipeList = document.getElementById("recipe-ul")
 for (var recipeId in recipes) {
-	recipeLi=buildRecipe(recipes[recipeId]);
+	recipeLi=buildRecipe(recipes[recipeId],true);
 	recipeList.appendChild(recipeLi)
 }
 
