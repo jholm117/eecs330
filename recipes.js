@@ -4,13 +4,22 @@ const recipes = {
 		id: "gingerSoyChicken",
 		imgSrc: "images/chicken.jpg",
 		cookTime: "30 min",
-		calories: "600 cal"},
+		calories: "600 cal",
+		tags: ["","Asian","Cheap"]},
 	"lasagna" : {
 		name: "Lasagna",
 		id: "lasagna",
 		imgSrc: "images/chicken.jpg",
 		cookTime: "3 hr",
-		calories: "900 cal"}
+		calories: "900 cal",
+		tags: ["","Italian"]},
+	"garlicRoastedBroccoli" : {
+		name: "Garlic Roasted Broccoli",
+		id: "garlicRoastedBroccoli",
+		imgSrc: "images/chicken.jpg",
+		cookTime: "20 min",
+		calories: "150 cal",
+		tags: ["","Vegetarian"]}
 }
 
 const recipeList = document.getElementById("recipe-ul")
