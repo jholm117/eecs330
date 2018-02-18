@@ -6,20 +6,34 @@ const recipes = {
 		cookTime: "30 min",
 		calories: "600 cal",
 		tags: ["","Asian","Cheap"]},
-	"lasagna" : {
-		name: "Lasagna",
-		id: "lasagna",
-		imgSrc: "images/chicken.jpg",
-		cookTime: "3 hr",
-		calories: "900 cal",
-		tags: ["","Italian"]},
 	"garlicRoastedBroccoli" : {
 		name: "Garlic Roasted Broccoli",
 		id: "garlicRoastedBroccoli",
-		imgSrc: "images/chicken.jpg",
+		imgSrc: "images/garlicRoastedBroccoli.jpg",
 		cookTime: "20 min",
 		calories: "150 cal",
-		tags: ["","Vegetarian"]}
+		tags: ["","Vegetarian"]},
+	"squashTaco" : {
+		name: "Roasted Butternut Squash Tacos",
+		id: "squashTaco",
+		imgSrc: "images/squashTaco.jpg",
+		cookTime: "50 min",
+		calories: "400 cal",
+		tags: ["","Mexican","Vegetarian"]},
+	"shrimpSoup" : {
+		name: "Roasted Butternut Squash Tacos",
+		id: "shrimpSoup",
+		imgSrc: "images/shrimpSoup.jpg",
+		cookTime: "50 min",
+		calories: "520 cal",
+		tags: ["",""]},
+	"porkChop" : {
+		name: "Cinnamon Chipotle Pork Chops",
+		id: "porkChop",
+		imgSrc: "images/porkChop.jpg",
+		cookTime: "25 min",
+		calories: "800 cal",
+		tags: ["",""]}
 }
 
 const recipeList = document.getElementById("recipe-ul")
