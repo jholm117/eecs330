@@ -6,11 +6,11 @@ function buildRecipe(recipeInfo, forBrowser) {
 	template.getElementsByClassName("card-title")[0].innerHTML=recipeInfo.name
 	template.getElementsByClassName("calorie-count")[0].innerHTML=recipeInfo.calories
 	if (forBrowser){
-		template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToShoppingList('" + recipeInfo.id + "')")
+		template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("i")[1].setAttribute("onclick","addToShoppingList('" + recipeInfo.id + "')")
 	}
 	else
 	{
-		template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","removeFromShoppingList('" + recipeInfo.id + "')")
+		template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("i")[0].setAttribute("onclick","removeFromShoppingList('" + recipeInfo.id + "')")
 	}
 	template.style.display=""
 	return template

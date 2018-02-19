@@ -41,10 +41,7 @@ body{
     float: right;
 }
 
-.icon{
-    width: 1.5rem;
-    height: 1.5rem;
-}
+
 
 .recipe-info{
     float: left;
@@ -62,7 +59,7 @@ body{
 }
 
 #heart{
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .cook-time{
@@ -88,4 +85,8 @@ body{
 
 .stats{
     margin-top: 1.5rem;
+}
+
+.icon-bar{
+    font-size: 36px;
 }
