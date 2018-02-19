@@ -19,21 +19,21 @@ const recipes = {
 		imgSrc: "images/squashTaco.jpg",
 		cookTime: "50 min",
 		calories: "400 cal",
-		tags: ["","Mexican","Vegetarian"]},
+		tags: ["","Mexican","Vegetarian","Cheap"]},
 	"shrimpSoup" : {
-		name: "Roasted Butternut Squash Tacos",
+		name: "Shrimp Tomato Soup",
 		id: "shrimpSoup",
 		imgSrc: "images/shrimpSoup.jpg",
 		cookTime: "50 min",
 		calories: "520 cal",
-		tags: ["",""]},
+		tags: ["","Fusion"]},
 	"porkChop" : {
 		name: "Cinnamon Chipotle Pork Chops",
 		id: "porkChop",
 		imgSrc: "images/porkChop.jpg",
 		cookTime: "25 min",
 		calories: "800 cal",
-		tags: ["",""]}
+		tags: ["","Mexican","Fusion"]}
 }
 
 const recipeList = document.getElementById("recipe-ul")
