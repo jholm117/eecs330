@@ -51,8 +51,3 @@ if (localStorage.getItem("recipesInList") == null){
 	localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
 }
 
-function addToShoppingList(recipeId) {
-	const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
-	recipesInList.push(recipeId)
-	localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
-}
