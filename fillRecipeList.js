@@ -3,7 +3,7 @@ const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
 
 recipesInList.forEach(recipeID => {
 	const recipeData=recipes[recipeID]
-	const recipeLi = buildRecipe(recipeData,false)
+	const recipeLi = buildRecipe(recipeData,"list")
 	document.getElementById("shopping-list-recipes").appendChild(recipeLi)
 })
 
