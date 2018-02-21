@@ -12,9 +12,11 @@ function buildRecipe(recipeInfo, pageFor) {
 			break
 		case "list":
                 	template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","removeFromShoppingList('" + recipeInfo.id + "')")
+			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToSaved('" + recipeInfo.id + "')")
 			break
 		case "saved":
 			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","removeFromSaved('" + recipeInfo.id + "')")
+			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToShoppingList('" + recipeInfo.id + "')")
 			break
         }
         template.style.display=""
