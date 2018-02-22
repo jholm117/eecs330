@@ -10,7 +10,7 @@ function buildRecipe(recipeInfo) {
         template.getElementsByClassName("card-title")[0].innerHTML=recipeInfo.name
         template.getElementsByClassName("calorie-count")[0].innerHTML=recipeInfo.calories
 
-	icons = Array.from(template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img"))
+	const icons = Array.from(template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img"))
 	icons.forEach(icon => {
 		onclickString=icon.getAttribute("onclick")
 		onclickString=onclickString.insert(onclickString.indexOf(")"),"'"+recipeInfo.id+"'")
@@ -22,36 +22,34 @@ function buildRecipe(recipeInfo) {
 }
 
 function addToShoppingList(recipeId) {
-        const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
-        recipesInList.push(recipeId)
-        localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
+        addToList("recipesInList",recipeId)
 }
 
 function removeFromShoppingList(recipeId){
-        document.getElementById(recipeId).outerHTML = ""
-
-        const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
-        idx = recipesInList.indexOf(recipeId)
-        if (idx > -1){
-                recipesInList.splice(idx, 1)
-        }
-        localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
+        removeFromList("recipesInList",recipeId)	
 }
 
-// should eventually combine these and make saved vs list an arg
 function addToSaved(recipeId) {
-	const recipesInSaved = JSON.parse(localStorage.getItem("recipesInSaved"))
-	recipesInSaved.push(recipeId)
-	localStorage.setItem("recipesInSaved", JSON.stringify(recipesInSaved))
+	addToList("recipesInSaved",recipeId)
 }
 
 function removeFromSaved(recipeId) {
+	removeFromList("recipesInSaved",recipeId)
+}
+
+function addToList(listKey,recipeId) {
+	const list = JSON.parse(localStorage.getItem(listKey))
+	list.push(recipeId)
+	localStorage.setItem(listKey, JSON.stringify(list))
+}
+
+function removeFromList(listKey,recipeId) {
 	document.getElementById(recipeId).outerHTML = ""
 
-	const recipesInSaved = JSON.parse(localStorage.getItem("recipesInSaved"))
-	idx = recipesInSaved.indexOf(recipeId)
-	if (idx > -1){
-		recipesInSaved.splice(idx,1)
+	const list = JSON.parse(localStorage.getItem(listKey))
+	const recipeIdxInList = list.indexOf(recipeId)
+	if (recipeIdxInList > -1){
+		list.splice(recipeIdxInList,1)
 	}
-	localStorage.setItem("recipesInSaved", JSON.stringify(recipesInSaved))
+	localStorage.setItem(listKey, JSON.stringify(list))
 }
