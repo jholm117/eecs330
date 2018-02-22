@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="finder-stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="finder-stylesheet.css">        
         <title>Recipe Finder</title>
     </head>
     <body>
@@ -29,16 +30,16 @@
 			    <div class="recipe-info">
 				<h2 class="card-title"></h2>
 				<div class="stats">
-				    <div class="cook-time">
-					<img class="icon" src="node_modules/open-iconic/svg/clock.svg" alt="clock">
-					<span></span>
+				    <div class="cook-time">  
+                        		<i class="material-icons">access_time</i>
+                        		<span class="minutes"></span>
 				    </div>
 				    <div class="calorie-count"></div>
 				</div>
 			    </div>
 			    <div class="recipe-buttons">
-				<img class="icon" id="top-icon" src="node_modules/open-iconic/svg/heart.svg" alt="heart" onclick="addToSaved()">
-				<img class="icon" src="node_modules/open-iconic/svg/list.svg" onclick="addToShoppingList()" alt="list">
+                    		<div><i class="material-icons icon-bar" id="top-icon" onclick="addToSaved()">favorite</i></div>
+                    		<div><i class="material-icons icon-bar" onclick="addToShoppingList()">list</i></div>
 			    </div>
 			</div>
 		    </div>

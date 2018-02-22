@@ -10,7 +10,7 @@ function buildRecipe(recipeInfo) {
         template.getElementsByClassName("card-title")[0].innerHTML=recipeInfo.name
         template.getElementsByClassName("calorie-count")[0].innerHTML=recipeInfo.calories
 
-	const icons = Array.from(template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img"))
+	const icons = Array.from(template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("i"))
 	icons.forEach(icon => {
 		onclickString=icon.getAttribute("onclick")
 		onclickString=onclickString.insert(onclickString.indexOf(")"),"'"+recipeInfo.id+"'")
