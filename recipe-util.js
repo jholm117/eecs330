@@ -1,24 +1,22 @@
-function buildRecipe(recipeInfo, pageFor) {
+String.prototype.insert = function(insertAtIndex, stringToInsert) {
+	return this.slice(0,insertAtIndex) + stringToInsert + this.slice(insertAtIndex,this.length)
+}
+
+function buildRecipe(recipeInfo) {
         const template = document.getElementById("recipeLiTemplate").cloneNode(true)
         template.setAttribute("id",recipeInfo.id)
         template.getElementsByClassName("recipe-image")[0].setAttribute("src",recipeInfo.imgSrc)
         template.getElementsByClassName("cook-time")[0].getElementsByTagName("span")[0].innerHTML = recipeInfo.cookTime
         template.getElementsByClassName("card-title")[0].innerHTML=recipeInfo.name
         template.getElementsByClassName("calorie-count")[0].innerHTML=recipeInfo.calories
-        switch (pageFor) { 
-		case "finder":
-			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","addToSaved('" + recipeInfo.id + "')")
-			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToShoppingList('" + recipeInfo.id + "')")
-			break
-		case "list":
-                	template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","removeFromShoppingList('" + recipeInfo.id + "')")
-			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToSaved('" + recipeInfo.id + "')")
-			break
-		case "saved":
-			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[0].setAttribute("onclick","removeFromSaved('" + recipeInfo.id + "')")
-			template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img")[1].setAttribute("onclick","addToShoppingList('" + recipeInfo.id + "')")
-			break
-        }
+
+	icons = Array.from(template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("img"))
+	icons.forEach(icon => {
+		onclickString=icon.getAttribute("onclick")
+		onclickString=onclickString.insert(onclickString.indexOf(")"),"'"+recipeInfo.id+"'")
+		icon.setAttribute("onclick",onclickString)
+	})
+
         template.style.display=""
         return template
 }
