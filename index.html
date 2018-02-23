@@ -11,8 +11,9 @@
     <body>
         <input type="search" name="search" id="search" placeholder="Search for recipes..." onkeyup="applySearch('recipe-ul')">
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recipe Filter
-            <span class="caret"></span></button>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Recipe Filter<span class="caret"></span>
+            </button>
             <ul class="dropdown-menu">
                 <button class="dropdown-item" type="button" onclick="filterSelection('all')">All</button>
                 <button class="dropdown-item" type="button" onclick="filterSelection('Asian')">Asian</button>
@@ -23,39 +24,39 @@
             </ul>
         </div>
     	<li id=recipeLiTemplate style="display:none">
-		<div class="recipe-card border">
-		    <img class="recipe-image" alt="Card image cap">
-		    <div class="card border-0">
-			<div class="card-body">
-			    <div class="recipe-info">
-				<h2 class="card-title"></h2>
-				<div class="stats">
-				    <div class="cook-time">  
-                        		<i class="material-icons">access_time</i>
-                        		<span class="minutes"></span>
-				    </div>
-				    <div class="calorie-count"></div>
-				</div>
-			    </div>
-			    <div class="recipe-buttons">
-                    		<div><i class="material-icons icon-bar" id="top-icon" onclick="addToSaved()">favorite</i></div>
-                    		<div><i class="material-icons icon-bar" onclick="addToShoppingList()">list</i></div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	</li>
-	<ul id="recipe-ul">
-	</ul>
+            <div class="recipe-card border">
+                <img class="recipe-image" alt="Card image cap">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="recipe-info">
+                            <h2 class="card-title"></h2>
+                            <div class="stats">
+                                <div class="cook-time">  
+                                    <i class="material-icons">access_time</i>
+                                    <span class="minutes"></span>
+                                </div>
+                                <div class="calorie-count"></div>
+                            </div>
+                        </div>
+                        <div class="recipe-buttons">
+                            <div><i class="material-icons icon-bar" id="top-icon" onclick="addToSaved()">favorite</i></div>
+                            <div><i class="material-icons icon-bar" onclick="addToShoppingList()">add_shopping_cart</i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <ul id="recipe-ul">
+        </ul>
         <nav class="nav nav-pills nav-fill fixed-bottom">            
             <a class="nav-item nav-link active" href="#">Find Recipes</a>
             <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
             <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
             <a class="nav-item nav-link" href="saved-recipes.html">My Profile</a>
         </nav>
-	<script src="recipe-util.js"></script>
-	<script src="recipes.js"></script>
-    	  <script src="search-bar.js"></script>
+        <script src="recipe-util.js"></script>
+        <script src="recipes.js"></script>
+        <script src="search-bar.js"></script>
         <script src="recipe-filter.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

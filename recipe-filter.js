@@ -5,6 +5,6 @@ function filterSelection(selector) {
   if (selector == "all") selector = ""
   recipeItems.forEach(item => {    
     	tags = recipes[item.id].tags
-	item.style.display = tags.indexOf(selector) > -1 ? "block" : "none" 
+	item.style.display = tags.indexOf(selector) > -1 ? "" : "none" 
 	})
 }

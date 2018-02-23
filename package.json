@@ -5,7 +5,5 @@
   "repository": "https://github.com/jholm117/eecs330.git",
   "author": "jholm117 <jholm117@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "open-iconic": "^1.1.1"
-  }
+  "dependencies": {}
 }
