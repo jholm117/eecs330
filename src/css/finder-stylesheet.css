@@ -28,28 +28,24 @@ body{
 
 .recipe-buttons{
     float: right;
-}
-
-.recipe-buttons img{
-    width: 2rem;
-    height: 2rem;
-    display: block;
-}
-
-.recipe-buttons i {
     cursor: pointer;
 }
 
-#top-icon{
+
+.recipe-buttons i {
+    font-size: 36px;
+}
+
+.top-icon{
     margin-bottom: 1.2rem;
 }
 
 .cook-time{
-    float: left;
+    
 }
 
 .calorie-count{
-    text-align: center;
+    
 }
 
 .recipe-image{
@@ -60,15 +56,11 @@ body{
 }
 
 .recipe-card{
-    width: 50%;
+    width: 70%;
     height: 9rem;
     margin: auto;    
 }
 
 .stats{
-    margin-top: 1.5rem;
-}
-
-.icon-bar{
-    font-size: 36px;
+    text-align: left;
 }

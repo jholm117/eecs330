@@ -36,23 +36,4 @@ const recipes = {
 		tags: ["","Mexican","Fusion"]}
 }
 
-const recipeList = document.getElementById("recipe-ul")
-for (var recipeId in recipes) {
-	recipeLi=buildRecipe(recipes[recipeId]);
-	recipeList.appendChild(recipeLi)
-}
-
-if (localStorage.getItem("recipes") == null){
-	localStorage.setItem("recipes", JSON.stringify(recipes))
-}
-
-if (localStorage.getItem("recipesInList") == null){
-	const recipesInList = []
-	localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
-}
-
-if (localStorage.getItem("recipesInSaved") == null) {
-	const recipesInSaved = []
-	localStorage.setItem("recipesInSaved", JSON.stringify(recipesInSaved))
-}
-
+export default recipes

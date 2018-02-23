@@ -5,5 +5,10 @@
   "repository": "https://github.com/jholm117/eecs330.git",
   "author": "jholm117 <jholm117@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "live-server": "^1.2.0"
+  },
+  "scripts": {
+    "server": "./node_modules/.bin/live-server"
+  }
 }
