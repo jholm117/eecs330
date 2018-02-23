@@ -23,14 +23,16 @@ function buildRecipe(recipeInfo) {
 
 function addToShoppingList(recipeId) {
         addToList("recipesInList",recipeId)
+	alert("Recipe added to your shopping list")
 }
 
 function removeFromShoppingList(recipeId){
         removeFromList("recipesInList",recipeId)	
 }
 
-function addToSaved(recipeId) {
+function addToSaved(recipeId) {	
 	addToList("recipesInSaved",recipeId)
+	alert("Recipe added to your favorites")
 }
 
 function removeFromSaved(recipeId) {
