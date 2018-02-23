@@ -31,15 +31,15 @@
 				<h2 class="card-title"></h2>
 				<div class="stats">
 				    <div class="cook-time">  
-                        <i class="material-icons">access_time</i>
-                        <span class="minutes"></span>
+                        		<i class="material-icons">access_time</i>
+                        		<span class="minutes"></span>
 				    </div>
 				    <div class="calorie-count"></div>
 				</div>
 			    </div>
 			    <div class="recipe-buttons">
-                    <div><i class="material-icons icon-bar" id="heart">favorite</i></div>
-                    <div><i class="material-icons icon-bar" onclick="addToShoppingList('gingerSoyChicken')">list</i></div>
+                    		<div><i class="material-icons icon-bar" id="top-icon" onclick="addToSaved()">favorite</i></div>
+                    		<div><i class="material-icons icon-bar" onclick="addToShoppingList()">list</i></div>
 			    </div>
 			</div>
 		    </div>
@@ -51,9 +51,9 @@
             <a class="nav-item nav-link active" href="#">Find Recipes</a>
             <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
             <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
-            <a class="nav-item nav-link" href="coming-soon.html">My Profile</a>
+            <a class="nav-item nav-link" href="saved-recipes.html">My Profile</a>
         </nav>
-	<script src="buildRecipe.js"></script>
+	<script src="recipe-util.js"></script>
 	<script src="recipes.js"></script>
     	  <script src="search-bar.js"></script>
         <script src="recipe-filter.js"></script>

@@ -38,7 +38,7 @@ const recipes = {
 
 const recipeList = document.getElementById("recipe-ul")
 for (var recipeId in recipes) {
-	recipeLi=buildRecipe(recipes[recipeId],true);
+	recipeLi=buildRecipe(recipes[recipeId]);
 	recipeList.appendChild(recipeLi)
 }
 
@@ -51,8 +51,8 @@ if (localStorage.getItem("recipesInList") == null){
 	localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
 }
 
-function addToShoppingList(recipeId) {
-	const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
-	recipesInList.push(recipeId)
-	localStorage.setItem("recipesInList", JSON.stringify(recipesInList))
+if (localStorage.getItem("recipesInSaved") == null) {
+	const recipesInSaved = []
+	localStorage.setItem("recipesInSaved", JSON.stringify(recipesInSaved))
 }
+
