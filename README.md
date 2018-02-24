@@ -25,3 +25,8 @@ instead of
 ```
 "src/js/recipe-finder.js"
 ```
+We will have to add onclick handlers via js files instead of explicitly in the html.
+```
+your_DOM_node.addEventListener('click', your_function_here)
+```
+Notice you can add many kinds of event listeners and will have to specify 'click'.

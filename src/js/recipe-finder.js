@@ -30,7 +30,7 @@ if (localStorage.getItem("recipesInSaved") == null) {
 
 function filterSelection(selector) {
 	const recipeItems = Array.from(document.getElementById("recipe-ul").getElementsByTagName("li"))
-	if (selector == "all") selector = ""
+	if (selector == "All") selector = ""
 	recipeItems.forEach(item => {    
 		const tags = recipes[item.id].tags
 		item.style.display = tags.indexOf(selector) > -1 ? "" : "none" 
@@ -47,4 +47,4 @@ const addHandlersToFilters = () => {
 
 
 addHandlersToFilters()
-filterSelection("all")
+filterSelection("All")
