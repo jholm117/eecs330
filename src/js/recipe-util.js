@@ -38,6 +38,7 @@ export function buildRecipe(recipeInfo, buttons) {
 
 export function addToShoppingList(recipeId) {
 	addToList("recipesInList",recipeId)
+	alert("Recipe added to your shopping list")
 }
 
 export function removeFromShoppingList(recipeId){
@@ -45,7 +46,8 @@ export function removeFromShoppingList(recipeId){
 }
 
 export function addToSaved(recipeId) {
-	addToList("recipesInSaved",recipeId)
+	addToList("recipesInSaved",recipeId)	
+	alert("Recipe added to your favorites")
 }
 
 export function removeFromSaved(recipeId) {
