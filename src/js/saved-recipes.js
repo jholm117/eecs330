@@ -1,5 +1,5 @@
 import recipes from './recipes.js'
-import { buildRecipe, addToShoppingList, removeFromSaved } from './recipe-util.js'
+import { buildRecipe, addToShoppingList, removeFromSaved, addSearchHandler} from './recipe-util.js'
 
 const recipesInSaved = JSON.parse(localStorage.getItem("recipesInSaved"))
 
@@ -19,3 +19,5 @@ recipesInSaved.forEach(recipeID => {
         const recipeLi = buildRecipe(recipeData, buttons)
         document.getElementById("saved-recipes").appendChild(recipeLi)
 })
+
+addSearchHandler('saved-recipes')

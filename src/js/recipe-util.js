@@ -70,3 +70,24 @@ function removeFromList(listKey,recipeId) {
 	}
 	localStorage.setItem(listKey, JSON.stringify(list))
 }
+ function applySearch(listName) {
+	const filter = this.value.toUpperCase()
+	const list = Array.from(document.getElementById(listName).getElementsByTagName('li'))
+	
+	list.forEach(listItem => {
+		const title = listItem.getElementsByClassName("card-title")[0].innerHTML // this will need to pull something from listItem once recipe list items implemented
+		if (title.toUpperCase().indexOf(filter) > -1)
+		{
+			listItem.style.display = ""
+		}
+		else
+		{
+			listItem.style.display = "none"
+		}
+	})
+}
+
+export const addSearchHandler = (listName) =>{
+	const searchBox = document.getElementById("search")
+	searchBox.addEventListener('keyup', applySearch.bind(searchBox, listName))
+}

@@ -1,5 +1,5 @@
 import recipes from './recipes.js'
-import { buildRecipe, addToShoppingList, addToSaved } from './recipe-util.js'
+import { buildRecipe, addToShoppingList, addToSaved, addSearchHandler } from './recipe-util.js'
 
 const buttons = {
 	top: {
@@ -48,3 +48,4 @@ const addHandlersToFilters = () => {
 
 addHandlersToFilters()
 filterSelection("All")
+addSearchHandler('recipe-ul')
