@@ -10,20 +10,20 @@ export function buildRecipe(recipeInfo, buttons) {
 			  <img class="recipe-image" src="${recipeInfo.imgSrc}" alt="Card image cap">
 			    <div class="card border-0">
 			      <div class="card-body">
-				<div class="recipe-info">
-				  <h2 class="card-title">${recipeInfo.name}</h2>
-				  <div class="stats">
-				    <div class="cook-time">  
-				       <i class="material-icons">access_time</i>
-				       <span class="minutes">${recipeInfo.cookTime}</span>
-				    </div>
-				    <div class="calorie-count">${recipeInfo.calories}</div>
-				  </div>
-			        </div>
-			      <div class="recipe-buttons">
-			        <div><i class="material-icons top-icon">${buttons.top.icon}</i></div>
-			        <div><i class="material-icons">${buttons.bottom.icon}</i></div>
-			      </div>
+							<div class="recipe-info">
+				  			<h2 class="card-title">${recipeInfo.name}</h2>
+								<div class="stats">
+									<div class="cook-time">  
+										<i class="material-icons">access_time</i>
+										<span class="minutes">${recipeInfo.cookTime}</span>
+									</div>
+								<div class="calorie-count">${recipeInfo.calories}</div>
+							</div>
+						</div>
+						<div class="recipe-buttons">
+							<div><i class="material-icons top-icon">${buttons.top.icon}</i></div>
+							<div><i class="material-icons">${buttons.bottom.icon}</i></div>
+						</div>
 			    </div>
 			  </div>
 			</div>`

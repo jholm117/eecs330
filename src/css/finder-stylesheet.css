@@ -63,4 +63,8 @@ body{
 
 .stats{
     text-align: left;
+    font-size: 17px;
+}
+.stats i {
+    font-size: 17px;
 }
