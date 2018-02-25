@@ -7,10 +7,12 @@ const shoppingListId = 'shopping-list-recipes'
 const buttons = {
 	top: {
 		icon: "delete",
+		text: "Remove",
 		onClick: removeFromShoppingList,
 	},
 	bottom: {
 		icon: "favorite",
+		text: "Add to Favorites",
 		onClick: addToSaved,
 	},
 }

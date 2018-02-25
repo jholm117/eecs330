@@ -6,10 +6,12 @@ const recipeFinderListId = "recipe-ul"
 const buttons = {
 	top: {
 		icon: "favorite",
+		text: "Add to Favorites",
 		onClick: addToSaved,
 	},
 	bottom: {
 		icon: "add_shopping_cart",
+		text: "Add to List",
 		onClick: addToShoppingList,
 	},
 }

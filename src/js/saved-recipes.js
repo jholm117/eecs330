@@ -6,10 +6,12 @@ const favoriteRecipeListId = 'saved-recipes'
 const buttons =  {
 	top: {
 		icon: "delete",
+		text: "Remove",
 		onClick: removeFromSaved,
 	},
 	bottom: {
 		icon: "list",
+		text: "Add to List",
 		onClick: addToShoppingList,
 	},
 }

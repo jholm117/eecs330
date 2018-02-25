@@ -22,17 +22,17 @@ function buildRecipe(recipeInfo, buttons) {
 								<div class="calorie-count">${recipeInfo.calories}</div>
 							</div>
 						</div>
-						<div class="recipe-buttons">
-							<div><i class="material-icons top-icon">${buttons.top.icon}</i></div>
-							<div><i class="material-icons">${buttons.bottom.icon}</i></div>
+						<div class="btn-group-vertical recipe-buttons">
+							<button class="btn btn-outline-secondary top-button border-0"><i class="material-icons">${buttons.top.icon}</i><span>${buttons.top.text}</span></button>
+							<button class="btn btn-outline-secondary border-0"><i class="material-icons">${buttons.bottom.icon}</i><span>${buttons.bottom.text}</span></button>
 						</div>
 			    </div>
 			  </div>
 			</div>`
 	
-	const iTags = template.getElementsByClassName("recipe-buttons")[0].getElementsByTagName("i")
-	iTags[0].addEventListener("click", buttons.top.onClick.bind(null,recipeInfo.id))
-	iTags[1].addEventListener("click", buttons.bottom.onClick.bind(null,recipeInfo.id))	
+	const recipeButtons = template.getElementsByClassName("btn")
+	recipeButtons[0].addEventListener("click", buttons.top.onClick.bind(null,recipeInfo.id))
+	recipeButtons[1].addEventListener("click", buttons.bottom.onClick.bind(null,recipeInfo.id))	
 	return template
 }
 
