@@ -1,5 +1,17 @@
+.page-container {
+	width: 1250px;
+	margin: auto;
+}
+
+.page-container .ul-container-for-filter {
+	width: 77%;
+	float: right;
+}
+
 ul {
     list-style-type: none;
+    width: 100%;
+    padding: 0;
 }
 
 body{
@@ -9,7 +21,7 @@ body{
 #search {
 	display: block;
     margin: auto;
-    width: 90%;
+    width: 100%;
     height: 3%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -52,7 +64,7 @@ body{
 }
 
 .recipe-card{
-    width: 65%;
+    width: 100%;
     height: 9rem;
     margin: auto;    
 }
@@ -69,7 +81,7 @@ body{
 }
 
 .filters {
-    width: 13%;
+    width: 20%;
     float: left;
 }
 
