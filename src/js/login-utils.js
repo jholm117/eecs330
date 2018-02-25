@@ -35,7 +35,7 @@ export const loginFormHandler = () => {
 		setCurrentUser(username)
 		navigateToRecipeFinder()
 	} else {
-		alertUser()
+		handleFailedLogin()
 	}
 }
 
@@ -55,13 +55,13 @@ function isValidPassword(name, password){
 
 export function CreateAllUsers(usernames){
     usernames.forEach(user=>{
-        if(!userExists(user)){
+        if(!userExists(user.name)){
             createUser(user)
         }
     })
 }
 
-function alertUser(){
+function handleFailedLogin(){
 	alert("Invalid Credentials")
 	document.getElementById('usernameInput').value = ""
 	document.getElementById('passwordInput').value = ""
