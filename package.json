@@ -6,6 +6,9 @@
   "author": "jholm117 <jholm117@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "open-iconic": "^1.1.1"
+    "live-server": "^1.2.0"
+  },
+  "scripts": {
+    "server": "./node_modules/.bin/live-server"
   }
 }
