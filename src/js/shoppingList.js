@@ -1,7 +1,8 @@
-import recipes from './recipes.js'
-import { buildRecipe, removeFromShoppingList, addToSaved, addSearchHandler } from './recipe-util.js'
+import { removeFromShoppingList, addToSaved, addSearchHandler, populateList } from './recipe-util.js'
+import { getCurrentUser } from './login-utils.js'
 
-const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
+const user = getCurrentUser()
+const shoppingListId = 'shopping-list-recipes'
 
 const buttons = {
 	top: {
@@ -15,10 +16,6 @@ const buttons = {
 		onClick: addToSaved,
 	},
 }
-recipesInList.forEach(recipeID => {
-	const recipeData=recipes[recipeID]
-	const recipeLi = buildRecipe(recipeData, buttons)
-	document.getElementById("shopping-list-recipes").appendChild(recipeLi)
-})
 
-addSearchHandler('shopping-list-recipes')
+populateList(user.listRecipes, buttons, shoppingListId)
+addSearchHandler(shoppingListId)

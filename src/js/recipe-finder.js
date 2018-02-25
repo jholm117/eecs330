@@ -1,6 +1,8 @@
 import recipes from './recipes.js'
-import { buildRecipe, addToShoppingList, addToSaved, addSearchHandler } from './recipe-util.js'
+import { addToShoppingList, addToSaved, addSearchHandler, populateList } from './recipe-util.js'
+import { addLoginHandler } from './login-utils.js'
 
+const recipeFinderListId = "recipe-ul"
 const buttons = {
 	top: {
 		icon: "favorite",
@@ -14,24 +16,8 @@ const buttons = {
 	},
 }
 
-const recipeList = document.getElementById("recipe-ul")
-
-for (let recipeId in recipes) {
-	const recipeLi=buildRecipe(recipes[recipeId], buttons);
-	recipeList.appendChild(recipeLi)
-}
-
-if (localStorage.getItem("recipesInList") == null){
-	localStorage.setItem("recipesInList", "[]")
-}
-
-if (localStorage.getItem("recipesInSaved") == null) {
-	localStorage.setItem("recipesInSaved", "[]")
-}
-
-
 function filterSelection(selector) {
-	const recipeItems = Array.from(document.getElementById("recipe-ul").getElementsByTagName("li"))
+	const recipeItems = Array.from(document.getElementById(recipeFinderListId).getElementsByTagName("li"))
 	if (selector == "All") selector = ""
 	recipeItems.forEach(item => {    
 		const tags = recipes[item.id].tags
@@ -40,14 +26,16 @@ function filterSelection(selector) {
 }
 
 const addHandlersToFilters = () => {
-	const filters = Array.from(document.getElementsByClassName('dropdown-item'))
+	const filters = Array.from(document.getElementsByClassName('filter'))
 	filters.forEach(filter =>{
 		filter.addEventListener('click', filterSelection.bind(null, filter.innerHTML))
 	})
 	
 }
 
-
+populateList(Object.keys(recipes), buttons, recipeFinderListId)
 addHandlersToFilters()
 filterSelection("All")
-addSearchHandler('recipe-ul')
+addSearchHandler(recipeFinderListId)
+addLoginHandler('login-jeff', 'jeff')
+addLoginHandler('login-theo','theo')

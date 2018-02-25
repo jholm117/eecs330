@@ -52,7 +52,7 @@ body{
 }
 
 .recipe-card{
-    width: 70%;
+    width: 65%;
     height: 9rem;
     margin: auto;    
 }
@@ -66,4 +66,19 @@ body{
     padding-right: 4px;
     position: relative;
     bottom: 1px;
+}
+
+.filters {
+    width: 13%;
+    float: left;
+}
+
+.filter{
+    font-size: 1.2rem;
+}
+
+.filter-title {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }

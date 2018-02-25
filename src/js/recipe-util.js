@@ -1,8 +1,10 @@
-String.prototype.insert = function(insertAtIndex, stringToInsert) {
-	return this.slice(0,insertAtIndex) + stringToInsert + this.slice(insertAtIndex,this.length)
-}
+import { getCurrentUser, updateUser } from './login-utils.js'
+import recipes from './recipes.js'
 
-export function buildRecipe(recipeInfo, buttons) {
+const listRecipesKey = "listRecipes"
+const favoriteRecipesKey = "favoriteRecipes"
+
+function buildRecipe(recipeInfo, buttons) {
 	const template = document.createElement("li")
 	template.setAttribute("id",recipeInfo.id)
 	template.innerHTML = 
@@ -34,48 +36,51 @@ export function buildRecipe(recipeInfo, buttons) {
 	return template
 }
 
-
+export const populateList = (idList, buttons, listId) => {
+	idList.forEach(id =>{
+		const recipeNode = buildRecipe(recipes[id], buttons)
+		document.getElementById(listId).appendChild(recipeNode)
+	})
+}
 
 export function addToShoppingList(recipeId) {
-	addToList("recipesInList",recipeId)
+	addToList(listRecipesKey,recipeId)
 	alert("Recipe added to your shopping list")
 }
 
 export function removeFromShoppingList(recipeId){
-	removeFromList("recipesInList",recipeId)	
+	removeFromList(listRecipesKey,recipeId)	
 }
 
 export function addToSaved(recipeId) {
-	addToList("recipesInSaved",recipeId)	
+	addToList(favoriteRecipesKey,recipeId)	
 	alert("Recipe added to your favorites")
 }
 
 export function removeFromSaved(recipeId) {
-	removeFromList("recipesInSaved",recipeId)
+	removeFromList(favoriteRecipesKey,recipeId)
 }
 
 function addToList(listKey,recipeId) {
-	const list = JSON.parse(window.localStorage.getItem(listKey))
+	const user = getCurrentUser()
+	const list = user[listKey]
 	if(list.indexOf(recipeId)<0){
 		list.push(recipeId)
-		localStorage.setItem(listKey, JSON.stringify(list))
+		updateUser(user)
 	}
 }
 
 function removeFromList(listKey,recipeId) {
 	document.getElementById(recipeId).outerHTML = ""
-
-	const list = JSON.parse(localStorage.getItem(listKey))
-	const recipeIdxInList = list.indexOf(recipeId)
-	if (recipeIdxInList > -1){
-		list.splice(recipeIdxInList,1)
-	}
-	localStorage.setItem(listKey, JSON.stringify(list))
+	const user = getCurrentUser()
+	user[listKey] = user[listKey].filter(id => id !== recipeId)
+	updateUser(user)
 }
- function applySearch(listName) {
+
+function applySearch(listName) {
 	const filter = this.value.toUpperCase()
 	const list = Array.from(document.getElementById(listName).getElementsByTagName('li'))
-	
+
 	list.forEach(listItem => {
 		const title = listItem.getElementsByClassName("card-title")[0].innerHTML // this will need to pull something from listItem once recipe list items implemented
 		if (title.toUpperCase().indexOf(filter) > -1)
