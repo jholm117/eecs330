@@ -1,0 +1,14 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.form-group{
+    width: 20%;
+    margin: auto;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
