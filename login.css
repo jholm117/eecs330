@@ -1,15 +1,16 @@
 body{
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);;
 }
 
 .title{
     font-size: 30px;
     text-align: center;
-    margin-top: 10px;    
+    padding-top: 30px; 
 }
 
 .form-group{
-    width: 20%;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
 }
@@ -18,5 +19,15 @@ body{
     display: block;
     margin: auto;
     margin-top: 25px;
-    width: 20%
+    width: 80%
+}
+
+.loginform{
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    background: white;
+    margin-top: 18%;
+    margin-bottom: 18%;
 }
