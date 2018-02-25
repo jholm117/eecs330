@@ -2,13 +2,21 @@ body{
     font-family: Arial, sans-serif;
 }
 
+.title{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;    
+}
+
 .form-group{
     width: 20%;
     margin: auto;
+    margin-top: 20px;
 }
 
 #submit{
     display: block;
     margin: auto;
     margin-top: 10px;
+    width: 20%
 }
