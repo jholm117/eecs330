@@ -38,7 +38,7 @@ function filterSelection(selector) {
 }
 
 const addHandlersToFilters = () => {
-	const filters = Array.from(document.getElementsByClassName('dropdown-item'))
+	const filters = Array.from(document.getElementsByClassName('filter'))
 	filters.forEach(filter =>{
 		filter.addEventListener('click', filterSelection.bind(null, filter.innerHTML))
 	})
