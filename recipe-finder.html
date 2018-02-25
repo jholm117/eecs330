@@ -9,17 +9,19 @@
         <title>Recipe Finder</title>
     </head>
     <body>
-        <input type="search" name="search" id="search" placeholder="Search for recipes...">
-        <div class="list-group filters border">
-            <p class="filter-title">Show results for</p>
-            <a href='#' class="list-group-item list-group-item-action filter border-0 active" data-toggle="list">All</a>
-            <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Asian</a>
-            <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Mexican</a>
-            <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Vegetarian</a>
-            <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Fusion</a>
-            <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Cheap</a>
-        </div>    	
-        <ul id="recipe-ul"></ul>
+        <div class="page-container">
+            <input type="search" name="search" id="search" placeholder="Search for recipes...">
+            <div class="list-group filters border">
+                <p class="filter-title">Show results for</p>
+                <a href='#' class="list-group-item list-group-item-action filter border-0 active" data-toggle="list">All</a>
+                <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Asian</a>
+                <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Mexican</a>
+                <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Vegetarian</a>
+                <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Fusion</a>
+                <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Cheap</a>
+            </div>    	
+            <ul class="" id="recipe-ul"></ul>
+        </div>
         <nav class="nav nav-pills nav-fill fixed-bottom">            
             <a class="nav-item nav-link active" href="#">Find Recipes</a>
             <a class="nav-item nav-link" href="./shopping-list.html">Shopping List</a>
