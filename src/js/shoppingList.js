@@ -6,10 +6,12 @@ const recipesInList = JSON.parse(localStorage.getItem("recipesInList"))
 const buttons = {
 	top: {
 		icon: "delete",
+		text: "Remove",
 		onClick: removeFromShoppingList,
 	},
 	bottom: {
 		icon: "favorite",
+		text: "Add to Favorites",
 		onClick: addToSaved,
 	},
 }
