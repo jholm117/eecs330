@@ -1,10 +1,12 @@
 
-export const addLoginHandler = () =>{
-	const loginHandler = () =>{
-		createUser('user1')
-		setCurrentUser('user1')
+export const addLoginHandler = (id, username) =>{
+	const loginHandler = (name) =>{
+        if(!localStorage.hasOwnProperty(username)){
+            createUser(name)
+        }
+		setCurrentUser(name)
 	}
-	document.getElementById('login').addEventListener('click', loginHandler)
+	document.getElementById(id).addEventListener('click', ()=>loginHandler(username))
 }
 
 const createUser = (username) =>{
