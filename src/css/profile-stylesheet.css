@@ -3,8 +3,10 @@ body{
 }
 
 .profile-info-wrapper{
-	margin: auto;
-	width: 100%;
+	margin-right:2rem;
+	margin-left:2rem;
+	margin-top:2rem;
+	width: auto;
 	height: 20rem;
 	margin-bottom:2rem;
 }
@@ -12,24 +14,27 @@ body{
 .profile-image{
 	float:left;
 	height:100%;
-	width:25%;
-	overflow:hidden;
 }
 
 .profile-image img{
-	width:100%;
-	height:auto;
+	width:auto;
+	height:100%;
 }
 
 .profile-info{
-	margin-left:3%;
+	margin-left:2rem;
+	margin-right:0rem;
 	float:left;
 	height:100%;
-	width:72%;
+	width:auto;
 }
 
 .profile-info-name{
 	margin-top:1rem;
+}
 
+.list-group{
+	margin-left:2rem;
+	margin-right:2rem;
 }
 
