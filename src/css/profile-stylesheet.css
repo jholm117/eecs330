@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.profile-info-wrapper{
+	margin: auto;
+	width: 100%;
+	height: 20rem;
+	margin-bottom:2rem;
+}
+
+.profile-image{
+	float:left;
+	height:100%;
+	width:25%;
+	overflow:hidden;
+}
+
+.profile-image img{
+	width:100%;
+	height:auto;
+}
+
+.profile-info{
+	margin-left:3%;
+	float:left;
+	height:100%;
+	width:72%;
+}
+
+.profile-info-name{
+	margin-top:1rem;
+
+}
+
