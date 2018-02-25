@@ -1,6 +1,6 @@
 import recipes from './recipes.js'
 import { addToShoppingList, addToSaved, addSearchHandler, populateList } from './recipe-util.js'
-import { addLoginHandler } from './login-utils.js'
+import { redirectIfLoggedOut } from './login-utils.js';
 
 const recipeFinderListId = "recipe-ul"
 const buttons = {
@@ -32,10 +32,8 @@ const addHandlersToFilters = () => {
 	})
 	
 }
-
+redirectIfLoggedOut()
 populateList(Object.keys(recipes), buttons, recipeFinderListId)
 addHandlersToFilters()
 filterSelection("All")
 addSearchHandler(recipeFinderListId)
-addLoginHandler('login-jeff', 'jeff')
-addLoginHandler('login-theo','theo')

@@ -1,5 +1,5 @@
 import { removeFromShoppingList, addToSaved, addSearchHandler, populateList } from './recipe-util.js'
-import { getCurrentUser } from './login-utils.js'
+import { getCurrentUser, redirectIfLoggedOut } from './login-utils.js'
 
 const user = getCurrentUser()
 const shoppingListId = 'shopping-list-recipes'
@@ -16,6 +16,6 @@ const buttons = {
 		onClick: addToSaved,
 	},
 }
-
+redirectIfLoggedOut()
 populateList(user.listRecipes, buttons, shoppingListId)
 addSearchHandler(shoppingListId)
