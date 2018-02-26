@@ -13,10 +13,12 @@ body{
 .profile-image{
 	float:left;
 	height:100%;
+	width: 20rem;
 }
 
-.profile-image img{
+#image{
 	height:100%;
+	width: 100%;
 }
 
 .profile-info{
