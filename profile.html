@@ -10,25 +10,27 @@
         <title>Profile</title>
     </head>
     <body>
-	    <div class="page-container">
-		<div class="profile-info-wrapper">
-    			<div class="profile-image">
-    				<img class="profile-image" src="./images/blankProfile.png">
-    			</div>
-    			<div class="profile-info">
-    				<h1 class="profile-info-name">username</h2>
-    			</div>
-    		</div>
-		<div class="list-group list-group-flush">
-			<a href="saved-recipes.html" class="list-group-item">Favorites</a>
-			<a href="coming-soon.html" class="list-group-item">Nutrition History</a>
-			<a href="coming-soon.html" class="list-group-item">Past Recipes</a>
-		</div>
-	    </div>
+        <div class="page-container">
+            <div class="profile-info-wrapper">
+                <div class="profile-image">
+                    <img id="image">
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-info-name" id="profile-name"></h2>
+                </div>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="./saved-recipes.html" class="list-group-item">Favorites</a>
+                <a href="./coming-soon.html" class="list-group-item">Nutrition History</a>
+                <a href="./coming-soon.html" class="list-group-item">Past Recipes</a>
+                <a href="./index.html" id="logout" class="list-group-item">Log Out</a>
+            </div>
+        </div>
     	<nav class="nav nav-pills nav-fill fixed-bottom">            
-            <a class="nav-item nav-link" href="index.html">Find Recipes</a>
-            <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
-            <a class="nav-item nav-link" href="coming-soon.html">Calendar</a>
+            <a class="nav-item nav-link" href="./recipe-finder.html">Find Recipes</a>
+            <a class="nav-item nav-link" href="./shopping-list.html">Shopping List</a>
+            <a class="nav-item nav-link" href="./coming-soon.html">Calendar</a>
             <a class="nav-item nav-link active" href="#">My Profile</a>
         </nav>
+        <script type="module" src="./src/js/profile.js"></script>
     </body>
