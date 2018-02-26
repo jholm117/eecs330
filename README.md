@@ -30,3 +30,7 @@ We will have to add onclick handlers via js files instead of explicitly in the h
 your_DOM_node.addEventListener('click', your_function_here)
 ```
 Notice you can add many kinds of event listeners and will have to specify 'click'.
+## Login Credentials
+* username: Devon password: hi
+* username: Jeff password: password
+* username: JoshuaShiXXD420Blazze password: password
