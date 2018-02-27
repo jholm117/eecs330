@@ -44,8 +44,12 @@ export const populateList = (idList, buttons, listId) => {
 }
 
 export function addToShoppingList(recipeId) {
-	addToList(listRecipesKey,recipeId)
-	alert("Recipe added to your shopping list")
+	if(addToList(listRecipesKey,recipeId)){
+		alert("Recipe added to your shopping list")
+	}
+	else{
+		alert("Recipe already in your shopping list")
+	}
 }
 
 export function removeFromShoppingList(recipeId){
@@ -53,20 +57,29 @@ export function removeFromShoppingList(recipeId){
 }
 
 export function addToSaved(recipeId) {
-	addToList(favoriteRecipesKey,recipeId)	
-	alert("Recipe added to your favorites")
+	if(addToList(favoriteRecipesKey,recipeId)){
+		alert("Recipe added to your favorites")
+	}
+	else{
+		alert("Recipe already in your favorites")
+	}
 }
 
 export function removeFromSaved(recipeId) {
 	removeFromList(favoriteRecipesKey,recipeId)
 }
 
+// Only adds if item was not already in list. Returns whether item was NOT already in list
 function addToList(listKey,recipeId) {
 	const user = getCurrentUser()
 	const list = user[listKey]
 	if(list.indexOf(recipeId)<0){
 		list.push(recipeId)
 		updateUser(user)
+		return true
+	}
+	else{
+		return false
 	}
 }
 
