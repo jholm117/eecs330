@@ -4,10 +4,9 @@ body{
 
 .profile-info-wrapper{
 	margin-right:2rem;
-	margin-left:2rem;
-	margin-top:2rem;
 	height: 20rem;
 	margin-bottom:2rem;
+	float: left;
 }
 
 .profile-image{
@@ -32,11 +31,6 @@ body{
 	margin-top:1rem;
 }
 
-.list-group{
-	margin-left:2rem;
-	margin-right:2rem;
-}
-
 #logout{
-	color: red;
+	float: right;
 }
