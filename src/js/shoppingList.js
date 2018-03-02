@@ -10,6 +10,11 @@ const buttons = {
 		text: "Remove",
 		onClick: removeFromShoppingList,
 	},
+	middle: {
+		icon: "check",
+		text: "I made this",
+		onClick: "",
+	},
 	bottom: {
 		icon: "favorite",
 		text: "Add to Favorites",

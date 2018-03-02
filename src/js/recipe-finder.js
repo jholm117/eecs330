@@ -9,6 +9,11 @@ const buttons = {
 		text: "Add to Favorites",
 		onClick: addToSaved,
 	},
+	middle: {
+                icon: "check",
+                text: "I made this",
+                onClick: "",
+        },
 	bottom: {
 		icon: "add_shopping_cart",
 		text: "Add to List",

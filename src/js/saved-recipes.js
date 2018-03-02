@@ -9,6 +9,11 @@ const buttons =  {
 		text: "Remove",
 		onClick: removeFromSaved,
 	},
+	middle: {
+                icon: "check", 
+                text: "I made this", 
+                onClick: "", 
+        }, 
 	bottom: {
 		icon: "list",
 		text: "Add to List",
