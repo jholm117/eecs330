@@ -3,17 +3,17 @@ body{
 }
 
 .profile-info-wrapper{
-	margin-right:2rem;
-	margin-left:2rem;
 	margin-top:2rem;
-	height: 20rem;
-	margin-bottom:2rem;
+	margin-bottom:1rem;
+	height: 18rem;
+	background-color:green;
 }
 
 .profile-image{
 	float:left;
 	height:100%;
-	width: 20rem;
+	width: 18rem;
+	background-color:blue;
 }
 
 #image{
@@ -39,4 +39,22 @@ body{
 
 #logout{
 	color: red;
+}
+
+.nutrition-info-wrapper{
+	height:18rem;
+}
+
+.nutrition-header{
+	margin-top:3rem;
+	margin-bottom:1rem;
+}
+
+.graph-container{
+	width:35%;
+	height:20rem;
+	margin-right:15%;
+	margin-bottom:2rem;
+	float:left;
+	background-color:white;
 }
