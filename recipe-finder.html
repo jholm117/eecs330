@@ -11,7 +11,7 @@
     <body>
         <div class="container page-content">
             <input class="card-shadow border" type="search" name="search" id="search" placeholder="Search for recipes...">
-            <div class="list-group filters border card-shadow">
+            <div class="list-group list-group-flush filters border card-shadow">
                 <p class="filter-title">Show results for</p>
                 <a href='#' class="list-group-item list-group-item-action filter border-0 active" data-toggle="list">All</a>
                 <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Asian</a>
@@ -19,9 +19,11 @@
                 <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Vegetarian</a>
                 <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Fusion</a>
                 <a href='#' class="list-group-item list-group-item-action filter border-0" data-toggle="list">Cheap</a>
+                <a href="#" class="list-group-item list-group-item-action filter" data-toggle="list">Favorites</a>
             </div>    	
             <div class="ul-container-for-filter">
                 <ul id="recipe-ul"></ul>
+                <ul id="favorites-ul" style="display: none;"></ul>
             </div>
         </div>
         <script type="module" src="./src/js/recipe-finder.js"></script>

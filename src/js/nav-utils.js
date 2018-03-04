@@ -27,10 +27,10 @@ function makeNavbar(){
     `
 }
 
-function setActivePage(body){
+function setActivePage(){
     const path = window.location.pathname
     const page = path.substr(path.lastIndexOf('/'))
-    const aTag = body.querySelector(`a[href='${page}'`)
+    const aTag = document.querySelector(`a[href='${page}'`)
     aTag.className += " active"
     aTag.href = "#"
 }
@@ -49,9 +49,8 @@ function addLogoutHandler(){
 export function addNavToPage(){
     const body = document.getElementsByTagName('body')[0]
     const navbar = makeNavbar()
-    
     body.innerHTML = navbar + body.innerHTML
-    setActivePage(body)
+    setActivePage()
     setProfPicAndName()
     addLogoutHandler()
 }
