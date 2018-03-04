@@ -15,11 +15,14 @@ function buildRecipe(recipeInfo, buttons) {
 							<div class="recipe-info">
 				  			<h2 class="card-title">${recipeInfo.name}</h2>
 								<div class="stats">
-									<div class="cook-time">  
+									<div class="stat">  
 										<i class="material-icons">access_time</i>
-										<span class="minutes">${recipeInfo.cookTime}</span>
+										<span>${recipeInfo.cookTime}</span>
 									</div>
-								<div class="calorie-count">${recipeInfo.calories}</div>
+								<div class="stat">
+									<i class="material-icons">trending_up</i>
+									<span>${recipeInfo.calories}</span>
+								</div>
 							</div>
 						</div>
 						<div class="btn-group-vertical recipe-buttons">
