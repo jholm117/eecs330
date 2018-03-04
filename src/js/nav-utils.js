@@ -27,8 +27,8 @@ function makeNavbar(){
     `
 }
 
-function setActivePage(body){
-    const aTag = body.querySelector(`a[href='${window.location.pathname}'`)
+function setActivePage(){
+    const aTag = document.querySelector(`a[href='${window.location.pathname}'`)
     aTag.className += " active"
     aTag.href = "#"
 }
@@ -47,9 +47,8 @@ function addLogoutHandler(){
 export function addNavToPage(){
     const body = document.getElementsByTagName('body')[0]
     const navbar = makeNavbar()
-    
     body.innerHTML = navbar + body.innerHTML
-    setActivePage(body)
+    setActivePage()
     setProfPicAndName()
     addLogoutHandler()
 }
