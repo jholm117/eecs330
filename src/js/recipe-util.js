@@ -36,6 +36,18 @@ function buildRecipe(recipeInfo, buttons) {
 	return template
 }
 
+export function updateList(listId, buttons){
+	const IDs = Array.from(document.getElementById(listId).children).map(li => li.id)
+	const favorites = getCurrentUser().favoriteRecipes
+	favorites.forEach(recipeId => {
+		if(IDs.indexOf(recipeId) < 0){
+			const recipe = buildRecipe(recipes[recipeId], buttons)
+			document.getElementById(listId).appendChild(recipe)
+		} 
+	})
+
+}
+
 export const populateList = (idList, buttons, listId) => {
 	idList.forEach(id =>{
 		const recipeNode = buildRecipe(recipes[id], buttons)
@@ -48,8 +60,8 @@ export function addToShoppingList(recipeId) {
 	alert("Recipe added to your shopping list")
 }
 
-export function removeFromShoppingList(recipeId){
-	removeFromList(listRecipesKey,recipeId)	
+export function removeFromShoppingList(recipeId,listId){
+	removeFromList(listRecipesKey,recipeId, listId)	
 }
 
 export function addToSaved(recipeId) {
@@ -57,8 +69,8 @@ export function addToSaved(recipeId) {
 	alert("Recipe added to your favorites")
 }
 
-export function removeFromSaved(recipeId) {
-	removeFromList(favoriteRecipesKey,recipeId)
+export function removeFromSaved(recipeId, favoritesId) {
+	removeFromList(favoriteRecipesKey,recipeId, favoritesId)
 }
 
 function addToList(listKey,recipeId) {
@@ -70,8 +82,8 @@ function addToList(listKey,recipeId) {
 	}
 }
 
-function removeFromList(listKey,recipeId) {
-	document.getElementById(recipeId).outerHTML = ""
+function removeFromList(listKey,recipeId, listId) {
+	document.querySelector(`#${listId} #${recipeId}`).outerHTML = ""
 	const user = getCurrentUser()
 	user[listKey] = user[listKey].filter(id => id !== recipeId)
 	updateUser(user)
@@ -97,4 +109,12 @@ function applySearch(listName) {
 export const addSearchHandler = (listName) =>{
 	const searchBox = document.getElementById("search")
 	searchBox.addEventListener('keyup', applySearch.bind(searchBox, listName))
+}
+
+export function makeInvisible(id){
+	document.getElementById(id).style.display = "none"
+}
+
+export function makeVisible(id){
+	document.getElementById(id).style.display = ""
 }

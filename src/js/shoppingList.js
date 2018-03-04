@@ -6,14 +6,14 @@ const shoppingListId = 'shopping-list-recipes'
 
 const buttons = {
 	top: {
-		icon: "delete",
-		text: "Remove",
-		onClick: removeFromShoppingList,
+		icon: "favorite",
+		text: "Favorite",
+		onClick: addToSaved,
 	},
 	bottom: {
-		icon: "favorite",
-		text: "Add to Favorites",
-		onClick: addToSaved,
+		icon: "clear",
+		text: "Remove",
+		onClick: (id) => removeFromShoppingList(id,shoppingListId),
 	},
 }
 redirectIfLoggedOut()
