@@ -1,6 +1,7 @@
 import recipes from './recipes.js'
 import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, makeVisible, makeInvisible, updateList } from './recipe-util.js'
 import { redirectIfLoggedOut, getCurrentUser } from './login-utils.js';
+import { addNavToPage } from './nav-utils.js';
 
 const recipeFinderListId = "recipe-ul"
 const favoritesId = "favorites-ul"
@@ -55,10 +56,12 @@ const addHandlersToFilters = () => {
 	})
 	
 }
+// must be first
 redirectIfLoggedOut()
+
+addNavToPage()
 populateList(Object.keys(recipes), finderButtons, recipeFinderListId)
 populateList(getCurrentUser().favoriteRecipes, favoritesButtons, favoritesId)
-
 addHandlersToFilters()
 filterSelection("All")
 addSearchHandler(recipeFinderListId)

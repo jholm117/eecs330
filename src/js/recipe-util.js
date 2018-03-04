@@ -8,7 +8,7 @@ function buildRecipe(recipeInfo, buttons) {
 	const template = document.createElement("li")
 	template.setAttribute("id",recipeInfo.id)
 	template.innerHTML = 
-			`<div class="recipe-card border">
+			`<div class="recipe-card card-shadow">
 			  <img class="recipe-image" src="${recipeInfo.imgSrc}" alt="Card image cap">
 			    <div class="card border-0">
 			      <div class="card-body">
