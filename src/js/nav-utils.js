@@ -33,7 +33,7 @@ function setActivePage(body){
     aTag.href = "#"
 }
 
-function setProfPic(){
+function setProfPicAndName(){
     const user = getCurrentUser()
     document.getElementById("profpic").src = user.imageSource
     const tag = document.getElementById("profile-name")
@@ -50,6 +50,6 @@ export function addNavToPage(){
     
     body.innerHTML = navbar + body.innerHTML
     setActivePage(body)
-    setProfPic()
+    setProfPicAndName()
     addLogoutHandler()
 }
