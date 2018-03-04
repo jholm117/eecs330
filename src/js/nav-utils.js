@@ -28,7 +28,9 @@ function makeNavbar(){
 }
 
 function setActivePage(){
-    const aTag = document.querySelector(`a[href='${window.location.pathname}'`)
+    const path = window.location.pathname
+    const page = path.substr(path.lastIndexOf('/'))
+    const aTag = document.querySelector(`a[href='${page}'`)
     aTag.className += " active"
     aTag.href = "#"
 }
