@@ -7,9 +7,9 @@ function makeNavbar(){
             <a class="navbar-brand" href="#">BB</a>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="/recipe-finder.html">Find Recipes</a>
-                    <a class="nav-item nav-link" href="/shopping-list.html">Shopping List</a>
-                    <a class="nav-item nav-link" href="/coming-soon.html">Nutrition</a>
+                    <a class="nav-item nav-link" href="recipe-finder.html">Find Recipes</a>
+                    <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
+                    <a class="nav-item nav-link" href="coming-soon.html">Nutrition</a>
                 </div>
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item dropdown">
@@ -29,7 +29,7 @@ function makeNavbar(){
 
 function setActivePage(){
     const path = window.location.pathname
-    const page = path.substr(path.lastIndexOf('/'))
+    const page = path.substr(path.lastIndexOf('/')+1)
     const aTag = document.querySelector(`a[href='${page}'`)
     aTag.className += " active"
     aTag.href = "#"
