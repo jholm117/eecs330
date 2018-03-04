@@ -1,4 +1,5 @@
 import { redirectIfLoggedOut, getCurrentUser, logOut } from "./login-utils.js";
+import { addNavToPage } from "./nav-utils.js";
 
 function updateInfo(){
     const user = getCurrentUser()
@@ -11,5 +12,7 @@ function addLogOutHandler(){
 }
 
 redirectIfLoggedOut()
+
+addNavToPage()
 updateInfo()
 addLogOutHandler()
