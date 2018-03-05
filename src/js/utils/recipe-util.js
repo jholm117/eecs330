@@ -1,5 +1,5 @@
 import { getCurrentUser, updateUser } from './login-utils.js'
-import recipes from './recipes.js'
+import recipes from '../recipes.js'
 
 const listRecipesKey = "listRecipes"
 const favoriteRecipesKey = "favoriteRecipes"

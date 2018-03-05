@@ -1,6 +1,6 @@
-import { removeFromShoppingList, addToSaved, addSearchHandler, populateList } from './recipe-util.js'
-import { getCurrentUser, redirectIfLoggedOut } from './login-utils.js'
-import { addNavToPage } from './nav-utils.js';
+import { removeFromShoppingList, addToSaved, addSearchHandler, populateList } from '../utils/recipe-util.js'
+import { getCurrentUser, redirectIfLoggedOut } from '../utils/login-utils.js'
+import { addNavToPage } from '../utils/nav-utils.js';
 
 const user = getCurrentUser()
 const shoppingListId = 'shopping-list-recipes'

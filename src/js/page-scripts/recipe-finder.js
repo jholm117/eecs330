@@ -1,7 +1,7 @@
-import recipes from './recipes.js'
-import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, makeVisible, makeInvisible, updateList } from './recipe-util.js'
-import { redirectIfLoggedOut, getCurrentUser } from './login-utils.js';
-import { addNavToPage } from './nav-utils.js';
+import recipes from '../recipes.js'
+import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, makeVisible, makeInvisible, updateList } from '../utils/recipe-util.js'
+import { redirectIfLoggedOut, getCurrentUser } from '../utils/login-utils.js';
+import { addNavToPage } from '../utils/nav-utils.js';
 
 const recipeFinderListId = "recipe-ul"
 const favoritesId = "favorites-ul"

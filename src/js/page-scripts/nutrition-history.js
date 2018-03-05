@@ -1,6 +1,6 @@
-import { addNavToPage } from "./nav-utils.js";
-import { redirectIfLoggedOut } from "./login-utils.js";
-import { makeInvisible, makeVisible } from "./recipe-util.js";
+import { addNavToPage } from "../utils/nav-utils.js";
+import { redirectIfLoggedOut } from "../utils/login-utils.js";
+import { makeInvisible, makeVisible } from "../utils/recipe-util.js";
 
 
 redirectIfLoggedOut()

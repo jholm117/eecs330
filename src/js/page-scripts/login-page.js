@@ -1,4 +1,4 @@
-import { loginFormHandler, CreateAllUsers } from './login-utils.js' 
+import { loginFormHandler, CreateAllUsers } from '../utils/login-utils.js' 
 
 document.getElementById('submit').addEventListener('click', loginFormHandler)
 const usernames = [
