@@ -1,3 +1,32 @@
+import { addNavToPage } from "./nav-utils.js";
+import { redirectIfLoggedOut } from "./login-utils.js";
+import { makeInvisible, makeVisible } from "./recipe-util.js";
+
+
+redirectIfLoggedOut()
+addNavToPage()
+const caloriesId = 'calorie-chart-wrapper'
+const dvId = 'dv-chart-wrapper'
+const calorieFilterId = 'calorie-filter'
+const dvFilterId = 'dv-filter'
+
+
+
+function caloriesHandler(){
+    makeVisible(caloriesId)
+    makeInvisible(dvId)
+}
+
+function dailyValueHandler(){
+    makeVisible(dvId)
+    makeInvisible(caloriesId)
+}
+
+function addFilterHandlers(){
+    document.getElementById(calorieFilterId).addEventListener('click',caloriesHandler)
+    document.getElementById(dvFilterId).addEventListener('click', dailyValueHandler)
+}
+
 var ctx = document.getElementById('calorie-chart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -17,7 +46,7 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: "This Week's Calorie Intake",
+            text: "This Week's Caloric Intake",
             fontSize: 20,
         },
         legend: {
@@ -82,3 +111,6 @@ var chart = new Chart(ctx, {
         
     }
 });
+
+
+addFilterHandlers()

@@ -119,5 +119,5 @@ export function makeInvisible(id){
 }
 
 export function makeVisible(id){
-	document.getElementById(id).style.display = ""
+	document.getElementById(id).style.display = "block"
 }

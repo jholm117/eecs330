@@ -9,7 +9,7 @@ function makeNavbar(){
                 <div class="navbar-nav mr-auto">
                     <a class="nav-item nav-link" href="recipe-finder.html">Find Recipes</a>
                     <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
-                    <a class="nav-item nav-link" href="coming-soon.html">Nutrition</a>
+                    <a class="nav-item nav-link" href="nutrition-history.html">Nutrition</a>
                 </div>
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item dropdown">
