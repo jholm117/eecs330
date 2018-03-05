@@ -54,21 +54,26 @@ var chart = new Chart(ctx, {
         },
         scales: {
             yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Calories',
+                    fontSize: 20,
+                },
                 ticks: {
                     suggestedMin: 1800,
                     suggestedMax: 2500,
-                    fontSize: 15,
+                    fontSize: 14,
                 }
             }],
             xAxes: [{
                 ticks: {
-                    fontSize: 15,
+                    fontSize: 14,
                 }
             }]
         },
         elements: {
             line: {
-                tension:.5
+                tension:0.5
             }
         }
     }
@@ -93,15 +98,25 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: "Today's Nutrition Breakdown (% of Daily Value)",
+            text: "Today's Nutrition Breakdown",
             fontSize: 20,
         },
         scales: {
             yAxes: [{
+                scaleLabel:{
+                    display: true,
+                    labelString: '% Daily Value',
+                    fontSize: 20
+                },
                 ticks: {
                     suggestedMin: 0,
                     suggestedMax: 100,
-                    fontSize: 15,
+                    fontSize: 14,
+                }
+            }],
+            xAxes: [{
+                scaleLabel:{
+                    fontSize: 14,
                 }
             }]
         },
