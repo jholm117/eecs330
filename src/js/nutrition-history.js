@@ -9,7 +9,7 @@ var chart = new Chart(ctx, {
         datasets: [{
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [2000, 2408, 1852, 2234, 2314, 1796, 1952],
+            data: [2000, 2408, 2000, 2234, 2314, 1878, 1952],
         }]
     },
 
@@ -17,10 +17,25 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Calorie History',
+            text: "This Week's Calorie History",
+            fontSize: 20,
         },
         legend: {
             display: false,
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 1800,
+                    suggestedMax: 2500,
+                    fontSize: 15,
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontSize: 15,
+                }
+            }]
         },
         elements: {
             line: {
@@ -39,9 +54,9 @@ var chart = new Chart(ctx, {
     data: {
         labels: ["Carbs", "Protein", "Fat"],
         datasets: [{
-            backgroundColor: 'rgb(255, 99, 132)',
+            backgroundColor: ['rgb(128, 191, 255)','rgb(51, 204, 204)' ,'rgb(255, 153, 102)'],
             borderColor: 'rgb(255, 99, 132)',
-            data: [10, 10, 10],
+            data: [60, 45, 80],
         }]
     },
 
@@ -49,10 +64,21 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Nutrition Breakdown',
+            text: "Today's Nutrition Breakdown (% of Recommend Daily Intake)",
+            fontSize: 20,
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    fontSize: 15,
+                }
+            }]
         },
         legend: {
             display: false,
         },
+        
     }
 });
