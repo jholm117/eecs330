@@ -17,7 +17,7 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: "This Week's Calorie History",
+            text: "This Week's Calorie Intake",
             fontSize: 20,
         },
         legend: {
@@ -64,7 +64,7 @@ var chart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: "Today's Nutrition Breakdown (% of Recommend Daily Intake)",
+            text: "Today's Nutrition Breakdown (% of Daily Value)",
             fontSize: 20,
         },
         scales: {

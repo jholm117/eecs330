@@ -10,30 +10,26 @@
         <title>Nutrition History</title>
     </head>
     <body>
-        <div class="page-container">
-            <div class="profile-info-wrapper">
-                <div class="profile-image">
-                    <img id="image" alt="Profile picture">
-                </div>
+        <div class="container page-content">
+            <div class="profile-info-wrapper card-shadow border">
+                    <img class="profile-image" id="image" alt="Profile picture" src="images/jeff.jpg">
                 <div class="profile-info">
-                    <h1 class="profile-info-name" id="profile-name">Jeff</h1>
+                    <h1 class="profile-info-name" id="profile-name"></h1>
                 </div>
             </div>
             <div class="nutrition-info-wrapper">
-                <div class="graph-container">
-                    <canvas id="calorie-chart"></canvas>
+                <div class="graph-card">
+                    <div class="graph-container card-shadow border">
+                        <canvas class="graph" id="calorie-chart"></canvas>
+                    </div>
                 </div>
-                <div class="graph-container">
-                    <canvas id="nutrition-breakdown"></canvas>
+                <div class="graph-card">
+                    <div class="graph-container card-shadow border">
+                        <canvas class="graph" id="nutrition-breakdown"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
-        <nav class="nav nav-pills nav-fill fixed-bottom">
-            <a class="nav-item nav-link" href="./recipe-finder.html">Find Recipes</a>
-            <a class="nav-item nav-link" href="./shopping-list.html">Shopping List</a>
-            <a class="nav-item nav-link" href="./coming-soon.html">Calendar</a>
-            <a class="nav-item nav-link active" href="./profile.html">My Profile</a>
-        </nav>
         <script type="module" src="./src/js/profile.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
         <script type="module" src="./src/js/nutrition-history.js"></script>
