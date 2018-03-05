@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="./src/css/nutrition-stylesheet.css">
+	<link rel="stylesheet" href="./src/css/finder-stylesheet.css">
+        <title>Nutrition History</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="profile-info-wrapper">
+                <div class="profile-image">
+                    <img id="image" alt="Profile picture">
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-info-name" id="profile-name">Jeff</h1>
+                </div>
+            </div>
+            <div class="nutrition-info-wrapper">
+                <div class="graph-container">
+                    <canvas id="calorie-chart"></canvas>
+                </div>
+                <div class="graph-container">
+                    <canvas id="nutrition-breakdown"></canvas>
+                </div>
+            </div>
+        </div>
+        <nav class="nav nav-pills nav-fill fixed-bottom">
+            <a class="nav-item nav-link" href="./recipe-finder.html">Find Recipes</a>
+            <a class="nav-item nav-link" href="./shopping-list.html">Shopping List</a>
+            <a class="nav-item nav-link" href="./coming-soon.html">Calendar</a>
+            <a class="nav-item nav-link active" href="./profile.html">My Profile</a>
+        </nav>
+        <script type="module" src="./src/js/profile.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script type="module" src="./src/js/nutrition-history.js"></script>
+    </body>
+</html>
+
+
+
