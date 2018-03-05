@@ -17,7 +17,7 @@ function makeNavbar(){
                             <img id="profpic" height="30" width="30" alt="prof-pic" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item text-danger" id="logout" href="/index.html">Log out</a>
+                            <a class="dropdown-item text-danger" id="logout" href="index.html">Log out</a>
                         </div>
                     </div>
                 </div>
