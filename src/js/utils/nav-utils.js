@@ -4,12 +4,12 @@ function makeNavbar(){
     return `
     <nav class="navbar navbar-expand-xl navbar-dark bg-primary fixed-top">            
         <div class="container">
-            <a class="navbar-brand" href="#">BB</a>
+            <div class="navbar-brand mb-0 h1">BB</div>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="recipe-finder.html">Find Recipes</a>
-                    <a class="nav-item nav-link" href="shopping-list.html">Shopping List</a>
-                    <a class="nav-item nav-link" href="coming-soon.html">Nutrition</a>
+                    <a class="nav-item nav-link icon-link" href="recipe-finder.html"><i class="material-icons">search</i><span>Find Recipes</span></a>
+                    <a class="nav-item nav-link icon-link" href="shopping-list.html"><i class="material-icons">list</i><span>Shopping List</span></a>
+                    <a class="nav-item nav-link icon-link" href="nutrition-history.html"><i class="material-icons">trending_up</i><span>Nutrition Tracking</span></a>
                 </div>
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item dropdown">

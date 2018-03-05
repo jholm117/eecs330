@@ -1,5 +1,5 @@
 import { getCurrentUser, updateUser } from './login-utils.js'
-import recipes from './recipes.js'
+import recipes from '../recipes.js'
 
 const listRecipesKey = "listRecipes"
 const favoriteRecipesKey = "favoriteRecipes"
@@ -119,5 +119,5 @@ export function makeInvisible(id){
 }
 
 export function makeVisible(id){
-	document.getElementById(id).style.display = ""
+	document.getElementById(id).style.display = "block"
 }
