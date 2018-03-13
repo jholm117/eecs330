@@ -3,6 +3,9 @@
 	float: right;
 }
 
+.ul-container-no-filter {
+}
+
 ul {
     list-style-type: none;
     width: 100%;
@@ -12,6 +15,12 @@ ul {
 body{
     font-family: Arial, sans-serif;
     background-color: rgb(212, 232, 233); 
+}
+
+.no-results{
+	font-size: 24pt;
+	z-index: -1;
+	position: absolute;
 }
 
 #search {
