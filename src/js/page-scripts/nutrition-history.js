@@ -56,7 +56,7 @@ var chart = new Chart(ctx, {
         layout: {
         	padding: {
         		left: 10,
-        		right: 10,
+        		right: 40,
         		bottom: 10,
         		top:10,
         	},
@@ -87,7 +87,7 @@ var chart = new Chart(ctx, {
         },
         elements: {
             line: {
-                tension:0.0
+                tension: 0.0
 
             }
         }
