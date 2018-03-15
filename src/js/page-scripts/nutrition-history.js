@@ -36,6 +36,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         datasets: [{
+        	fill: false,
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: [2000, 2408, 2000, 2234, 2314, 1878, 1952],
@@ -52,6 +53,14 @@ var chart = new Chart(ctx, {
         legend: {
             display: false,
         },
+        layout: {
+        	padding: {
+        		left: 10,
+        		right: 40,
+        		bottom: 10,
+        		top:10,
+        	},
+        },
         scales: {
             yAxes: [{
                 scaleLabel: {
@@ -66,6 +75,11 @@ var chart = new Chart(ctx, {
                 }
             }],
             xAxes: [{
+            	scaleLabel: {
+            		display: true,
+            		labelString: 'Day of Week',
+            		fontSize: 20,
+            	},
                 ticks: {
                     fontSize: 14,
                 }
@@ -73,7 +87,8 @@ var chart = new Chart(ctx, {
         },
         elements: {
             line: {
-                tension:0.5
+                tension: 0.0
+
             }
         }
     }
@@ -101,6 +116,14 @@ var chart = new Chart(ctx, {
             text: "Today's Nutrition Breakdown",
             fontSize: 20,
         },
+        layout: {
+        	padding: {
+        		left: 10,
+        		right: 10,
+        		bottom: 10,
+        		top: 10,
+        	}
+        },
         scales: {
             yAxes: [{
                 scaleLabel:{
@@ -116,8 +139,13 @@ var chart = new Chart(ctx, {
             }],
             xAxes: [{
                 scaleLabel:{
-                    fontSize: 14,
-                }
+                    display: true,
+                    labelString: 'Macro',
+                    fontSize: 20,
+                },
+                ticks: {
+                	fontSize: 14,
+                },
             }]
         },
         legend: {
