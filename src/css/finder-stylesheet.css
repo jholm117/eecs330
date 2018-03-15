@@ -3,9 +3,6 @@
 	float: right;
 }
 
-.ul-container-no-filter {
-}
-
 ul {
     list-style-type: none;
     width: 100%;
@@ -21,6 +18,7 @@ body{
 	font-size: 24pt;
 	z-index: -1;
 	position: absolute;
+	color: #495057;
 }
 
 #search {
