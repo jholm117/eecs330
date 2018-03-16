@@ -1,5 +1,5 @@
 import recipes from '../recipes.js'
-import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, makeVisible, makeInvisible, updateList } from '../utils/recipe-util.js'
+import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, addFavoriteTag } from '../utils/recipe-util.js'
 import { redirectIfLoggedOut, getCurrentUser } from '../utils/login-utils.js';
 import { addNavToPage } from '../utils/nav-utils.js';
 
@@ -35,18 +35,10 @@ const favoritesButtons =  {
 function filterSelection(selector) {
 	const recipeItems = Array.from(document.getElementById(recipeFinderListId).getElementsByTagName("li"))
 	if (selector == "All") selector = ""
-	if (selector == "Favorites"){
-		updateList(favoritesId, favoritesButtons)
-		makeInvisible(recipeFinderListId)
-		makeVisible(favoritesId)
-	} else{
-		recipeItems.forEach(item => {    
-			makeInvisible(favoritesId)
-			makeVisible(recipeFinderListId)
-			const tags = recipes[item.id].tags
-			item.style.display = tags.indexOf(selector) > -1 ? "" : "none" 
-		})
-	}
+	recipeItems.forEach(item => {    
+		const tags = recipes[item.id].tags
+		item.style.display = tags.indexOf(selector) > -1 ? "" : "none" 
+	})
 }
 
 const addHandlersToFilters = () => {
@@ -56,12 +48,18 @@ const addHandlersToFilters = () => {
 	})
 	
 }
+
+function markFavorites() {
+	const favorites = getCurrentUser().favoriteRecipes
+	favorites.forEach(addFavoriteTag)
+}
+
 // must be first
 redirectIfLoggedOut()
 
 addNavToPage()
 populateList(Object.keys(recipes), finderButtons, recipeFinderListId)
-populateList(getCurrentUser().favoriteRecipes, favoritesButtons, favoritesId)
+markFavorites()
 addHandlersToFilters()
 filterSelection("All")
 addSearchHandler(recipeFinderListId)

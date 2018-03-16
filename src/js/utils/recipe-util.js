@@ -164,13 +164,25 @@ export function removeFromShoppingList(recipeId,listId){
 }
 
 export function addToSaved(recipeId) {
+	addFavoriteTag(recipeId)
 	addToList(favoriteRecipesKey,recipeId)	
 	alert("Recipe added to your favorites")
 }
 
 export function removeFromSaved(recipeId, favoritesId) {
+	removeFavoriteTag(recipeId)
 	removeFromList(favoriteRecipesKey,recipeId, favoritesId)
 }
+
+
+export function addFavoriteTag(recipeId) {
+	recipes[recipeId].tags.push("Favorites")
+}
+
+export function removeFavoriteTag(recipeId) {
+	recipes[recipeId].tags = recipes[recipeId].tags.filter(word => word != "Favorites")
+}
+
 
 function addToList(listKey,recipeId) {
 	const user = getCurrentUser()
