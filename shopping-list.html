@@ -11,8 +11,15 @@
     <body>
     	<div class="container page-content">
             <input class="border card-shadow" type="search" name="search" id="search" placeholder="Search for recipes...">
-            <ul id="shopping-list-recipes">
-            </ul>
+            <div class="list-group list-group-flush filters border-0 card-shadow">
+                    <p class="filter-title">View by</p>
+                    <a href='#' class="list-group-item list-group-item-action filter border-0 active" id="ingredient-filter" data-toggle="list">Ingredient</a>
+                    <a href='#' class="list-group-item list-group-item-action filter border-0" id="recipe-filter" data-toggle="list">Recipe</a>
+                </div>
+            <div class="ul-container-for-filter">
+                <ul id="shopping-list-recipes">
+                </ul>
+            </div>
 	    </div>
         <script type="module" src="./src/js/page-scripts/shoppingList.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
