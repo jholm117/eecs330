@@ -40,6 +40,7 @@ body{
 
 .recipe-info{
     float: left;
+    margin-left: 1rem;
 }
 
 .recipe-buttons{
@@ -64,6 +65,7 @@ body{
 .stat{
     display: flex;
     align-items: center;
+    margin-bottom: 0.3rem;
 }
 
 .recipe-image{
@@ -90,11 +92,43 @@ body{
     margin-top: 4.5%;
 }
 
-.recipe-card{
+.my-card{
     width: 100%;
-    height: 9rem;
-    margin: auto;
     margin-bottom: 1rem;
+    background-color: white;
+}
+
+.recipe-card{
+    height: 9rem;
+}
+
+.ingredient-card{
+    height: 8rem;
+}
+
+.plus-minus{
+    width: 7rem;
+}
+
+.plus-minus input{
+    text-align: center; 
+}
+
+.ingredient-toolbar{
+    /* float: right; */
+    /* width: 40%; */
+    display: flex;
+    align-items: center;
+    /* background: red; */
+}
+
+.ex{
+    float: right;
+}
+
+.units{
+    margin-left: 1rem;
+    font-size: 1rem;
 }
 
 .stats{
