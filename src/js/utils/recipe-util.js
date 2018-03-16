@@ -155,10 +155,11 @@ export function removeFromShoppingList(recipeId,listId){
 	removeFromList(listRecipesKey,recipeId, listId)	
 	recipes[recipeId].ingreds.forEach(ingredient => {
 		const card = document.getElementById(ingredient.item.name)
-		const input  = card.getElementsByTagName('input')[0]
-		input.value = parseInt(input.value) - ingredient.amount
-		if(input.value <= 0) card.remove()
-		
+		if(card){
+			const input  = card.getElementsByTagName('input')[0]
+			input.value = parseInt(input.value) - ingredient.amount
+			if(input.value <= 0) card.remove()
+		}
 	})
 }
 

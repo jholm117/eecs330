@@ -14,6 +14,14 @@ body{
     background-color: rgb(212, 232, 233); 
 }
 
+.no-results{
+	font-size: 24pt;
+	z-index: -1;
+	position: absolute;
+	right: 35%;
+	color: #495057;
+}
+
 #search {
         background-image: url('../../images/ic_search_black_48px.svg');
 	background-position: 3px 4px;
