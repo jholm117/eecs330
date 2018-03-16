@@ -1,4 +1,8 @@
 const ingredients = {
+	"filler": {
+		name: "Filler Ingredient",
+		units: "",
+	},
 	"chickenThighs": {
 		name: "Chicken Thighs (Bone-in)",
 		units: "pounds",
@@ -51,6 +55,47 @@ const ingredients = {
 		name: "Ground Beef",
 		units: "pounds",
 	},
+	"spaghetti": {
+		name: "Spaghetti",
+		units: "ounces",
+	},
+	"meatballs": {
+		name: "Meatballs",
+		units: "",
+	},
+	"chickenBreast": {
+		name: "Chicken Breast",
+		units: "pounds"
+	},
+	"noodles": {
+		name: "Noodles",
+		units: "ounces",
+	},
+	"vegetables": {
+		name: "Vegetables",
+		units: "pounds",
+	},
+	"flankSteak": {
+		name: "Flank Steak",
+		units: "pounds"
+	},
+	"teriyaki": {
+		name: "Teriyaki Sauce",
+		units: "tablespoons",
+	},
+	"broth": {
+		name: "Broth",
+		units: "cups",
+	},
+	"whiteRice": {
+		name: "White Rice",
+		units: "cups",
+	},
+
+
+
+
+
 } 
 const recipes = {
 	"gingerSoyChicken" : {
@@ -135,7 +180,10 @@ const recipes = {
 		cookTime: "30 minutes",
 		calories: "660 calories",
 		tags: [""],
-
+		ingreds: [
+			{ item: ingredients.spaghetti, amount: 6},
+			{ item: ingredients.meatballs, amount: 3},
+		],
 	},
 	"grilledChicken" : {
 		name: "Grilled Chicken Breast",
@@ -143,42 +191,70 @@ const recipes = {
 		imgSrc: "images/grilledChicken.jpg",
 		cookTime: "20 minutes",
 		calories: "240 calories",
-		tags: ["", "Cheap", "Healthy"]},
+		tags: ["", "Cheap", "Healthy"],
+		ingreds: [
+			{ item: ingredients.chickenBreast, amount: 1},
+		],
+	},
 	"vegeLoMein" : {
 		name: "Vegetable Lo Mein",
 		id: "vegeLoMein",
 		imgSrc: "images/vegeLoMein.jpg",
 		cookTime: "15 minutes",
 		calories: "170 calories",
-		tags: ["", "Vegetarian", "Asian"]},
+		tags: ["", "Vegetarian", "Asian"],
+		ingreds: [
+			{ item: ingredients.noodles, amount: 6},
+			{ item: ingredients.vegetables, amount: 1},
+		],
+	},
 	"teriyakiBeef" : {
 		name: "Teriyaki Beef",
 		id: "teriyakiBeef",
 		imgSrc: "images/teriyakiBeef.jpg",
 		cookTime: "25 minutes",
 		calories: "520 calories",
-		tags: ["", "Asian"]},
+		tags: ["", "Asian"],
+		ingreds: [
+			{ item: ingredients.flankSteak, amount: 1},
+			{ item: ingredients.teriyaki, amount: 4},
+		],
+	},
 	"chickenNoodleSoup" : {
 		name: "Chicken Noodle Soup",
 		id: "chickenNoodleSoup",
 		imgSrc: "images/chickenNoodleSoup.jpg",
 		cookTime: "30 minutes",
 		calories: "160 calories",
-		tags: ["", "Healthy", "Cheap"]},
+		tags: ["", "Healthy", "Cheap"],
+		ingreds: [
+			{ item: ingredients.chickenBreast, amount: 1},
+			{ item: ingredients.noodles, amount: 6},
+		],
+	},
 	"whiteRice" : {
 		name: "White Rice",
 		id: "whiteRice",
 		imgSrc: "images/whiteRice.jpg",
 		cookTime: "20 minutes",
 		calories: "125 calories",
-		tags: ["", "Vegetarian", "Cheap", "Healthy"]},
+		tags: ["", "Vegetarian", "Cheap", "Healthy"],
+		ingreds: [
+			{ item: ingredients.whiteRice, amount: 1},
+		],
+	},
 	"chickenStirFry" : {
 		name: "Chicken Stir Fry",
 		id: "chickenStirFry",
 		imgSrc: "images/chickenStirFry.jpg",
 		cookTime: "25 minutes",
 		calories: "470 caories",
-		tags: ["", "Asian", "Healthy"]},
+		tags: ["", "Asian", "Healthy"],
+		ingreds: [
+			{ item: ingredients.chickenBreast, amount: 1},
+			{ item: ingredients.vegetables, amount: 1},
+		],
+	},
 }
 
 
