@@ -1,36 +1,10 @@
 import recipes from '../recipes.js'
-import { addToShoppingList, addToSaved, addSearchHandler, populateList, removeFromSaved, addFavoriteTag } from '../utils/recipe-util.js'
+import { addToShoppingList, addToSaved, addSearchHandler, populateRecipeFinderList, removeFromSaved, addFavoriteTag, finderButtons } from '../utils/recipe-util.js'
 import { redirectIfLoggedOut, getCurrentUser } from '../utils/login-utils.js';
 import { addNavToPage } from '../utils/nav-utils.js';
 
 const recipeFinderListId = "recipe-ul"
 const favoritesId = "favorites-ul"
-const finderButtons = {
-	top: {
-		icon: "favorite",
-		text: "Favorite",
-		onClick: addToSaved,
-	},
-	bottom: {
-		icon: "playlist_add",
-		text: "Add to List",
-		onClick: addToShoppingList,
-	},
-}
-
-const favoritesButtons =  {
-	top: {
-		icon: "clear",
-		text: "Unfavorite",
-		onClick: (id) => removeFromSaved(id,favoritesId),
-	},
-	bottom: {
-		icon: "playlist_add",
-		text: "Add to List",
-		onClick: addToShoppingList,
-	},
-}
-
 
 function filterSelection(selector) {
 	const recipeItems = Array.from(document.getElementById(recipeFinderListId).getElementsByTagName("li"))
@@ -58,7 +32,7 @@ function markFavorites() {
 redirectIfLoggedOut()
 
 addNavToPage()
-populateList(Object.keys(recipes), finderButtons, recipeFinderListId)
+populateRecipeFinderList(Object.keys(recipes), recipeFinderListId)
 markFavorites()
 addHandlersToFilters()
 filterSelection("All")
