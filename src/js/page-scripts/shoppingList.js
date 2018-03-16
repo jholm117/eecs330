@@ -1,4 +1,4 @@
-import { removeFromShoppingList, addToSaved, addSearchHandler, populateShoppingList } from '../utils/recipe-util.js'
+import { addSearchHandler, populateShoppingList } from '../utils/recipe-util.js'
 import { getCurrentUser, redirectIfLoggedOut } from '../utils/login-utils.js'
 import { addNavToPage } from '../utils/nav-utils.js';
 
@@ -27,20 +27,8 @@ function addFilterHandlers(){
 	document.getElementById(ingredientFilterId).addEventListener('click', ingredientFilterHandler)
 }
 
-const buttons = {
-	top: {
-		icon: "favorite",
-		text: "Favorite",
-		onClick: addToSaved,
-	},
-	bottom: {
-		icon: "clear",
-		text: "Remove",
-		onClick: (id) => removeFromShoppingList(id,shoppingListId),
-	},
-}
 redirectIfLoggedOut()
 
 addNavToPage()
-populateShoppingList(user.listRecipes, buttons, shoppingListId)
+populateShoppingList(user.listRecipes, shoppingListId)
 addFilterHandlers()
