@@ -43,5 +43,4 @@ redirectIfLoggedOut()
 
 addNavToPage()
 populateShoppingList(user.listRecipes, buttons, shoppingListId)
-addSearchHandler(shoppingListId)
 addFilterHandlers()
