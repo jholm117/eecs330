@@ -4,6 +4,8 @@ import recipes from '../recipes.js'
 const listRecipesKey = "listRecipes"
 const favoriteRecipesKey = "favoriteRecipes"
 
+let currentSelector = ""
+
 function buildRecipe(recipeInfo, buttons) {
 	const template = document.createElement("li")
 	template.setAttribute("id",recipeInfo.id)
@@ -183,6 +185,10 @@ export function removeFavoriteTag(recipeId) {
 	recipes[recipeId].tags = recipes[recipeId].tags.filter(word => word != "Favorites")
 }
 
+export function markFavorites() {
+        const favorites = getCurrentUser().favoriteRecipes
+        favorites.forEach(addFavoriteTag)
+}
 
 function addToList(listKey,recipeId) {
 	const user = getCurrentUser()
@@ -200,9 +206,21 @@ function removeFromList(listKey,recipeId, listId) {
 	updateUser(user)
 }
 
+export function filterSelection(listId,selector) {
+        const recipeItems = Array.from(document.getElementById(listId).getElementsByTagName("li"))
+        if (selector == "All") selector = ""
+        recipeItems.forEach(item => {
+                const tags = recipes[item.id].tags
+                item.style.display = tags.indexOf(selector) > -1 ? "" : "none"
+        })
+}
+
 function applySearch(listName) {
 	const filter = this.value.toUpperCase()
-	const list = Array.from(document.getElementById(listName).getElementsByTagName('li'))
+	let currentSelector = document.getElementsByClassName("list-group-item list-group-item-action filter active")[0].innerHTML
+	if (currentSelector == "All") currentSelector = ""
+	let list = Array.from(document.getElementById(listName).getElementsByTagName('li'))
+	list = list.filter(listItem => recipes[listItem.id].tags.indexOf(currentSelector) > -1)
 
 	list.forEach(listItem => {
 		const title = listItem.getElementsByClassName("card-title")[0].innerHTML // this will need to pull something from listItem once recipe list items implemented
@@ -215,6 +233,8 @@ function applySearch(listName) {
 			listItem.style.display = "none"
 		}
 	})
+
+	/* filterSelection(listName,currentSelector) */
 }
 
 export const addSearchHandler = (listName) =>{
@@ -229,3 +249,5 @@ export function makeInvisible(id){
 export function makeVisible(id){
 	document.getElementById(id).style.display = "block"
 }
+
+markFavorites()
