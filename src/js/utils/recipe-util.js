@@ -234,7 +234,6 @@ function applySearch(listName) {
 		}
 	})
 
-	/* filterSelection(listName,currentSelector) */
 }
 
 export const addSearchHandler = (listName) =>{

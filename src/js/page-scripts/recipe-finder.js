@@ -31,16 +31,6 @@ const favoritesButtons =  {
 	},
 }
 
-/*
-function filterSelection(selector) {
-	const recipeItems = Array.from(document.getElementById(recipeFinderListId).getElementsByTagName("li"))
-	if (selector == "All") selector = ""
-	recipeItems.forEach(item => {    
-		const tags = recipes[item.id].tags
-		item.style.display = tags.indexOf(selector) > -1 ? "" : "none" 
-	})
-}
-*/
 
 const addHandlersToFilters = () => {
 	const filters = Array.from(document.getElementsByClassName('filter'))
@@ -49,13 +39,6 @@ const addHandlersToFilters = () => {
 	})
 	
 }
-
-/*
-function markFavorites() {
-	const favorites = getCurrentUser().favoriteRecipes
-	favorites.forEach(addFavoriteTag)
-}
-*/
 
 // must be first
 redirectIfLoggedOut()
