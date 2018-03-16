@@ -1,6 +1,6 @@
 import recipes from '../recipes.js'
-import { addToShoppingList, addToSaved, addSearchHandler, populateRecipeFinderList, removeFromSaved, addFavoriteTag, finderButtons, filterSelection, markFavorites } from '../utils/recipe-util.js'
-import { redirectIfLoggedOut, getCurrentUser } from '../utils/login-utils.js';
+import { addSearchHandler, populateRecipeFinderList, filterSelection, markFavorites } from '../utils/recipe-util.js'
+import { redirectIfLoggedOut } from '../utils/login-utils.js';
 import { addNavToPage } from '../utils/nav-utils.js';
 
 const recipeFinderListId = "recipe-ul"

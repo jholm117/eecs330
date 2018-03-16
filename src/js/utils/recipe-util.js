@@ -4,6 +4,9 @@ import recipes from '../recipes.js'
 const listRecipesKey = "listRecipes"
 const favoriteRecipesKey = "favoriteRecipes"
 
+const shoppingListId = 'shopping-list-recipes'
+
+
 let currentSelector = ""
 
 function buildRecipe(recipeInfo, buttons) {
@@ -96,19 +99,8 @@ function buildIngredientCard(ingredientInfo){
 	return template
 }
 
-export function updateList(listId, buttons){
-	const IDs = Array.from(document.getElementById(listId).children).map(li => li.id)
-	const favorites = getCurrentUser().favoriteRecipes
-	favorites.forEach(recipeId => {
-		if(IDs.indexOf(recipeId) < 0){
-			const recipe = buildRecipe(recipes[recipeId], buttons)
-			document.getElementById(listId).appendChild(recipe)
-		} 
-	})
-}
-
-export const populateShoppingList = (idList, buttons, listId) => {
-	populateList(idList, buttons, listId)
+export const populateShoppingList = (idList, listId) => {
+	populateList(idList, removeFromListButton, listId)
 	idList.forEach(id => makeInvisible(id))
 	const ingredients = idList.map(id => recipes[id].ingreds.map(buildIngredientCard))
 		.reduce((prev, curr) => prev.concat(curr), [])	
@@ -116,21 +108,13 @@ export const populateShoppingList = (idList, buttons, listId) => {
 }
 
 export const populateRecipeFinderList = (idList, listId) => {
-	idList.forEach(id =>{
-		let buttons = finderButtons
-		if(getCurrentUser().favoriteRecipes.indexOf(id) > -1){
-			buttons = {
-				top: unfavoriteButton,
-				bottom: finderButtons.bottom,
-			}
-		} 
-		const recipeNode = buildRecipe(recipes[id], buttons)
-		document.getElementById(listId).appendChild(recipeNode)
-	})
+	populateList(idList,addToListButton,listId)
 }
 
-export const populateList = (idList, buttons, listId) => {
+export const populateList = (idList, bottomButton, listId) => {
 	idList.forEach(id =>{
+		const isIdInFavorites = getCurrentUser().favoriteRecipes.indexOf(id) > -1
+		const buttons = isIdInFavorites ? { top: unfavoriteButton, bottom : bottomButton } : { top: favoriteButton, bottom : bottomButton }
 		const recipeNode = buildRecipe(recipes[id], buttons)
 		document.getElementById(listId).appendChild(recipeNode)
 	})
@@ -236,23 +220,22 @@ export function makeVisible(id){
 	document.getElementById(id).style.display = "block"
 }
 
-export const finderButtons = {
-	top: {
-		icon: "favorite",
-		text: "Favorite",
-		color: "secondary",
-		onClick: (id) => {
-			addToSaved(id)
-			swapTopButton(id, unfavoriteButton)
-		},
+const favoriteButton = {
+	icon: "favorite",
+	text: "Favorite",
+	color: "secondary",
+	onClick: (id) => {
+		addToSaved(id)
+		swapTopButton(id, unfavoriteButton)
 	},
-	bottom: {
-		icon: "playlist_add",
-		text: "Add to List",
-		color: "secondary",
-		onClick: (id) => { 
-			addToShoppingList(id)
-		},
+}
+
+const addToListButton = {
+	icon: "playlist_add",
+	text: "Add to List",
+	color: "secondary",
+	onClick: (id) => { 
+		addToShoppingList(id)
 	},
 }
 
@@ -261,8 +244,25 @@ const unfavoriteButton = {
 	text: "Unfavorite",
 	color: "danger",
 	onClick: (id) =>{
-		swapTopButton(id, finderButtons.top)
+		swapTopButton(id, favoriteButton)
 		removeFromSaved(id)
+		disappearIfFavoriteFilter(id)
+	},
+}
+
+const removeFromListButton = {
+	icon: "clear",
+	text: "Remove",
+	color: "secondary",
+	onClick: (id) => {
+		removeFromShoppingList(id,shoppingListId)
+	},
+}
+
+function disappearIfFavoriteFilter(id){
+	const favoritesFilter = document.getElementById('favorites-filter') 
+	if(favoritesFilter && favoritesFilter.className.indexOf('active')>-1){
+		makeInvisible(id)
 	}
 }
 
