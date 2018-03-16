@@ -19,6 +19,38 @@ const ingredients = {
 		name: "Garlic",
 		units: "cloves",
 	},	
+	"squash": {
+		name: "Butternut Squash",
+		units: "",
+	},
+	"taco": {
+		name: "Taco Shell",
+		units: "",
+	},
+	"shrimp": {
+		name: "Shrimp",
+		units: "pounds",
+	},
+	"tomato": {
+		name: "Tomato",
+		units: "",
+	},
+	"porkChop": {
+		name: "Pork Chop",
+		units: "pounds",
+	},
+	"cinnamon": {
+		name: "Cinnamon",
+		units: "tablespoons",
+	},
+	"chipotle": {
+		name: "Chipotle Peppers",
+		units: "",
+	},
+	"beef": {
+		name: "Ground Beef",
+		units: "pounds",
+	},
 } 
 const recipes = {
 	"gingerSoyChicken" : {
@@ -55,6 +87,8 @@ const recipes = {
 		tags: ["","Mexican","Vegetarian","Cheap"],
 		ingreds: [
 			// { item: ingredients.chickenThighs, amount: 4 },
+			{item: ingredients.squash, amount: 1},
+			{item: ingredients.taco, amount: 2},
 		],
 	},
 	"shrimpSoup" : {
@@ -65,7 +99,8 @@ const recipes = {
 		calories: "520 calories",
 		tags: ["","Fusion"],
 		ingreds: [
-			{ item: ingredients.chickenThighs, amount: 4 },
+			{ item: ingredients.shrimp, amount: 1},
+			{ item: ingredients.tomato, amount: 1},
 		],
 	},
 	"porkChop" : {
@@ -76,7 +111,9 @@ const recipes = {
 		calories: "800 calories",
 		tags: ["","Mexican","Fusion"],
 		ingreds: [
-			{ item: ingredients.chickenThighs, amount: 4 },
+			{ item: ingredients.porkChop, amount: 2},
+			{ item: ingredients.cinnamon, amount: 2},
+			{ item: ingredients.chipotle, amount: 1},
 		],
 	},
 	"tacoSalad" : {
@@ -85,14 +122,21 @@ const recipes = {
 		imgSrc: "images/tacoSalad.jpg",
 		cookTime: "30 minutes",
 		calories: "450 calories",
-		tags: ["", "Mexican", "Cheap"]},
+		tags: ["", "Mexican", "Cheap"],
+		ingreds: [
+			{ item: ingredients.taco, amount: 2},
+			{ item: ingredients.beef, amount: 1},
+		],
+	},
 	"spaghettiMeatballs" : {
 		name: "Spaghetti and Meatballs",
 		id: "spaghettiMeatballs",
 		imgSrc: "images/spaghettiMeatballs.jpg",
 		cookTime: "30 minutes",
 		calories: "660 calories",
-		tags: [""]},
+		tags: [""],
+
+	},
 	"grilledChicken" : {
 		name: "Grilled Chicken Breast",
 		id: "grilledChicken",
