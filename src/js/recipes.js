@@ -5,14 +5,20 @@ const ingredients = {
 	},
 	"ginger": {
 		name: "Ginger",
-		imgSrc: "",
 		units: "tablespoons",
 	},
 	"soy": {
 		name: "Soy Sauce",
-		imgSrc: "",
 		units: "tablespoons",
-	}
+	},
+	"broccoli": {
+		name: "Broccoli",
+		units: "crowns",
+	},
+	"garlic":{
+		name: "Garlic",
+		units: "cloves",
+	},	
 } 
 const recipes = {
 	"gingerSoyChicken" : {
@@ -36,7 +42,8 @@ const recipes = {
 		calories: "150 calories",
 		tags: ["","Vegetarian"],
 		ingreds: [
-			// { item: ingredients.chickenThighs, amount: 4 },
+			{ item: ingredients.garlic, amount: 2 },
+			{ item: ingredients.broccoli, amount: 4 },
 		],
 	},
 	"squashTaco" : {

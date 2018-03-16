@@ -39,6 +39,7 @@ function buildRecipe(recipeInfo, buttons) {
 
 function buildIngredientCard(ingredientInfo){
 	const template = document.createElement("li")
+	template.id = ingredientInfo.item.name
 	template.innerHTML = `<div class="card-shadow my-card ingredient-card">
 								<div class="card-body">
 									<div class="recipe-info">
@@ -64,7 +65,7 @@ function buildIngredientCard(ingredientInfo){
 	const minus = template.getElementsByClassName("minus-button")[0]
 	const ex = template.getElementsByClassName("ex")[0]
 	const makeCardInvisible =() =>{
-		template.style.display = "none"
+		template.remove()
 	}
 	ex.addEventListener('click', makeCardInvisible)
 	const changeValue = (inputField, amount) => {
@@ -152,6 +153,13 @@ export function addToShoppingList(recipeId) {
 
 export function removeFromShoppingList(recipeId,listId){
 	removeFromList(listRecipesKey,recipeId, listId)	
+	recipes[recipeId].ingreds.forEach(ingredient => {
+		const card = document.getElementById(ingredient.item.name)
+		const input  = card.getElementsByTagName('input')[0]
+		input.value = parseInt(input.value) - ingredient.amount
+		if(input.value <= 0) card.remove()
+		
+	})
 }
 
 export function addToSaved(recipeId) {
