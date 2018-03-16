@@ -4,7 +4,9 @@ function makeNavbar(){
     return `
     <nav class="navbar navbar-expand-xl navbar-dark bg-primary fixed-top">            
         <div class="container">
-            <div class="navbar-brand mb-0 h1">BB</div>
+            <a href="https://www.youtube.com/watch?v=CZ-Z1di-c58" target="_blank">
+		<div class="navbar-brand mb-0 h1">BB</div>
+	    </a>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav mr-auto">
                     <a class="nav-item nav-link icon-link" href="recipe-finder.html"><i class="material-icons">search</i><span>Find Recipes</span></a>
