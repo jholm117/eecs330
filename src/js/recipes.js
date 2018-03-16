@@ -33,7 +33,63 @@ const recipes = {
 		imgSrc: "images/porkChop.jpg",
 		cookTime: "25 minutes",
 		calories: "800 calories",
-		tags: ["","Mexican","Fusion"]}
+		tags: ["","Mexican","Fusion"]},
+	"tacoSalad" : {
+		name: "Taco Salad",
+		id: "tacoSalad",
+		imgSrc: "images/tacoSalad.jpg",
+		cookTime: "30 minutes",
+		calories: "450 calories",
+		tags: ["", "Mexican", "Cheap"]},
+	"spaghettiMeatballs" : {
+		name: "Spaghetti and Meatballs",
+		id: "spaghettiMeatballs",
+		imgSrc: "images/spaghettiMeatballs.jpg",
+		cookTime: "30 minutes",
+		calories: "660 calories",
+		tags: [""]},
+	"grilledChicken" : {
+		name: "Grilled Chicken Breast",
+		id: "grilledChicken",
+		imgSrc: "images/grilledChicken.jpg",
+		cookTime: "20 minutes",
+		calories: "240 calories",
+		tags: ["", "Cheap", "Healthy"]},
+	"vegeLoMein" : {
+		name: "Vegetable Lo Mein",
+		id: "vegeLoMein",
+		imgSrc: "images/vegeLoMein.jpg",
+		cookTime: "15 minutes",
+		calories: "170 calories",
+		tags: ["", "Vegetarian", "Asian"]},
+	"teriyakiBeef" : {
+		name: "Teriyaki Beef",
+		id: "teriyakiBeef",
+		imgSrc: "images/teriyakiBeef.jpg",
+		cookTime: "25 minutes",
+		calories: "520 calories",
+		tags: ["", "Asian"]},
+	"chickenNoodleSoup" : {
+		name: "Chicken Noodle Soup",
+		id: "chickenNoodleSoup",
+		imgSrc: "images/chickenNoodleSoup.jpg",
+		cookTime: "30 minutes",
+		calories: "160 calories",
+		tags: ["", "Healthy", "Cheap"]},
+	"whiteRice" : {
+		name: "White Rice",
+		id: "whiteRice",
+		imgSrc: "images/whiteRice.jpg",
+		cookTime: "20 minutes",
+		calories: "125 calories",
+		tags: ["", "Vegetarian", "Cheap", "Healthy"]},
+	"chickenStirFry" : {
+		name: "Chicken Stir Fry",
+		id: "chickenStirFry",
+		imgSrc: "images/chickenStirFry.jpg",
+		cookTime: "25 minutes",
+		calories: "470 caories",
+		tags: ["", "Asian", "Healthy"]},
 }
 
 export default recipes
